@@ -1,42 +1,49 @@
-import { shoe8 } from "../assets/images";
-import { Button } from "../components";
+import { me } from "../assets/images";
 
-const about = () => {
+const About = () => {
   return (
-    <section
-      id='about-us'
-      className='flex justify-between items-center max-lg:flex-col gap-10 w-full max-container'
-    >
-      <div className='flex flex-1 flex-col'>
-        <h2 className='font-palanquin capitalize text-4xl lg:max-w-lg font-bold'>
-          We Provide You
-          <span className='text-coral-red'> Super </span>
-          <span className='text-coral-red'>Quality </span> Shoes
-        </h2>
-        <p className='mt-4 lg:max-w-lg info-text'>
-          Ensuring premium comfort and style, our meticulously crafted footwear
-          is designed to elevate your experience, providing you with unmatched
-          quality, innovation, and a touch of elegance.
-        </p>
-        <p className='mt-6 lg:max-w-lg info-text'>
-          Our dedication to detail and excellence ensures your satisfaction
-        </p>
-        <div className='mt-11'>
-          <Button label='View details' />
+    
+    <section 
+    id="about-us"
+    className="relative flex justify-between items-center max-xl:flex-col-reverse gap-10 max-container pt-20 pb-20">
+     
+      <div className="flex-1 flex flex-col justify-start z-10">
+        <h1 className="font-palanquin capitalize text-8xl lg:max-w-lg font-bold">
+          Hel<span className="text-coral-yellow">lo!</span>
+        </h1>
+
+        <div className="absolute  justify-center items-center -z-10">
+        <h1 className="font-palanquin text-[290px] max-sm:text-[100px] font-bold text-lightGray opacity-10 pointer-events-none leading-none">
+          ABOUT ME
+        </h1>
+      </div>
+
+        {/* Main Description */}
+        <div className="space-y-6 mt-10">
+          <p className="lg:max-w-lg info-text">
+            I'm Joshua, a passionate web developer creating responsive websites
+            and building applications with innovative designs. I'm a starter
+            developer with savvy skills in front-end web development, ensuring
+            satisfactory projects for clients.
+          </p>
+          <p className="lg:max-w-lg info-text">
+            Our dedication to detail and excellence ensures your satisfaction.
+          </p>
         </div>
       </div>
 
-      <div className='flex-1 flex justify-center items-center'>
+      {/* Image Section */}
+      <div className="relative flex-1 flex justify-center items-center z-10">
         <img
-          src={shoe8}
-          alt='product detail'
+          src={me}
+          alt="About Me"
           width={570}
           height={522}
-          className='object-contain'
+          className="max-w-full object-contain"
         />
       </div>
     </section>
   );
 };
 
-export default about;
+export default About;

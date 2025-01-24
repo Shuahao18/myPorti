@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="w-full flex xl:flex-row flex-col gap-10 max-container justify-center min-h-screen px-10 py-10"
+      className="w-full flex xl:flex-row flex-col gap-5 max-container justify-center min-h-screen "
     >
       {/* Left side (Image) */}
       <div
