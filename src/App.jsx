@@ -3,9 +3,9 @@ import {
   CustomerReviews,
   Footer,
   Hero,
-  PopularProducts,
-  Services,
-  SpecialOffer,
+  About,
+  // Services,
+  Service,
   Subscribe,
   SuperQuality,
 } from "./sections";
@@ -18,17 +18,18 @@ const App = () => {
         <Hero />
       </section>
       <section className='padding'>
-        <PopularProducts />
+        <About />
+      </section>
+      <section className='padding'>
+        <Service />
       </section>
       <section className='padding'>
         <SuperQuality />
       </section>
-      <section className='padding-x py-10'>
+      {/* <section className='padding-x py-10'>
         <Services />
-      </section>
-      <section className='padding'>
-        <SpecialOffer />
-      </section>
+      </section> */}
+    
       <section className='bg-pale-blue padding'>
         <CustomerReviews />
       </section>

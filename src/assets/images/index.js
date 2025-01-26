@@ -3,6 +3,7 @@ import bigShoe2 from "./big-shoe2.png";
 import bigShoe3 from "./big-shoe3.png";
 
 import customer1 from "./customer1.jpeg";
+import skills from "./skills.jpg"; 
 import customer2 from "./customer2.svg";
 
 import footerLogo from "./footer-logo.svg";
@@ -33,6 +34,8 @@ export {
   headerLogo,
   logo,
   me,
+  skills,
+
   offer,
   shoe4,
   shoe5,

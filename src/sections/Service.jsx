@@ -1,17 +1,25 @@
 import { arrowRight } from "../assets/icons";
-import { offer } from "../assets/images";
+import { skills } from "../assets/images";
 import { Button } from "../components";
 
-const SpecialOffer = () => {
+const service = () => {
   return (
-    <section className='flex justify-between items-center max-xl:flex-col-reverse gap-10 max-container'>
-      <div className='flex-1'>
+    <section
+    id="service"
+     className='flex justify-between items-center max-xl:flex-col-reverse gap-10 max-container'>
+      <div className='flex-1 flex flex-col gap-10 justify-start items-start'>
+          <h5 className="text-4xl"
+          >PERSONAL</h5>
+          
+          <h1 className="text-8xl">
+          SKILLS</h1>
+        
         <img
-          src={offer}
+          src={skills}
           alt='Shoe Promotion'
-          width={773}
-          height={687}
-          className='object-contain w-full'
+          width={253}
+          height={50}
+          className=''
         />
       </div>
       <div className='flex flex-1 flex-col'>
@@ -20,7 +28,7 @@ const SpecialOffer = () => {
           Offer
         </h2>
         <p className='mt-4 info-text'>
-          Embark on a shopping journey that redefines your experience with
+          joshua a shopping journey that redefines your experience with
           unbeatable deals. From premier selections to incredible savings, we
           offer unparalleled value that sets us apart.
         </p>
@@ -43,4 +51,4 @@ const SpecialOffer = () => {
   );
 };
 
-export default SpecialOffer;
+export default service;
