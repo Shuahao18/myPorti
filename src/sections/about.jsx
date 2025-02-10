@@ -8,13 +8,13 @@ const About = () => {
       
       {/* Left Section (Text) */}
       <div className="flex-1 flex flex-col justify-start z-10">
-        <h1 className="font-palanquin capitalize text-8xl max-sm:text-[40px] font-bold">
+        <h1 className="font-palanquin capitalize text-8xl max-sm:text-[40px] max-sm:absolute max-sm:top-16 font-bold max-sm:items-center">
           Hel<span className="text-coral-yellow">lo!</span>
         </h1>
 
         {/* Large "ABOUT ME" Text (Fixed for Small Screens) */}
         <div className="absolute max-sm:relative flex justify-center items-center -z-10">
-          <h1 className="font-palanquin text-[290px] max-sm:text-[80px] font-bold text-lightGray opacity-10 pointer-events-none leading-none">
+          <h1 className="font-palanquin text-[290px] max-sm:text-[80px] max-sm:hidden font-bold text-lightGray opacity-10 pointer-events-none leading-none">
             ABOUT ME
           </h1>
         </div>
@@ -40,12 +40,12 @@ const About = () => {
           alt="About Me"
           width={500}
           height={400}
-          className="max-w-full object-contain max-sm:h-[300px] max-sm:relative max-sm:left-24"
+          className="max-w-full object-contain max-sm:h-[300px] max-sm:relative max-sm:left-28"
         />
 
         {/* Rotated Facebook Link (Fixed for Small Screens) */}
         <p
-          className="absolute -right-40 bottom-40 max-sm:relative max-sm:right-0 max-sm:bottom-0 max-sm:mt-4 lg:max-w-lg info-text text-center"
+          className="absolute -right-40 bottom-40 max-sm:relative max-sm:right-0 max-sm:bottom-0 max-sm:mt-4 lg:max-w-lg max-sm:text-sm info-text text-center"
           style={{
             transform: "rotate(-90deg)",
             whiteSpace: "nowrap",

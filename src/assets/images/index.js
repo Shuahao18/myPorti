@@ -12,6 +12,7 @@ import logo from "./logo.png";
 import me from "./me.png";
 
 import offer from "./offer.svg";
+import arrow from "./arrow.png"
 
 import shoe4 from "./shoe4.svg";
 import shoe5 from "./shoe5.svg";
@@ -35,6 +36,7 @@ export {
   logo,
   me,
   skills,
+  arrow,
 
   offer,
   shoe4,

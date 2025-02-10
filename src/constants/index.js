@@ -1,10 +1,10 @@
 import { facebook, instagram, shieldTick, support, truckFast, twitter } from "../assets/icons";
-import { bigShoe1, bigShoe2, bigShoe3, customer1, customer2, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3 } from "../assets/images";
+import { bigShoe1, bigShoe2, bigShoe3, customer2, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3 } from "../assets/images";
 
 export const navLinks = [
     { href: "#home", label: "Home" },
     { href: "#about-us", label: "About" },
-    { href: "#service", label: "Service" },
+    { href: "#skills", label: "Skills" },
 
     { href: "#project", label: "Project" },
     { href: "#contact-us", label: "Contact" },
@@ -74,16 +74,19 @@ export const services = [
 
 export const reviews = [
     {
-        imgURL: customer1,
-        customerName: 'Morich Brown',
-        rating: 4.5,
-        feedback: "The attention to detail and the quality of the product exceeded my expectations. Highly recommended!"
+        imgURL: twitter,
+        backName: 'UI/UX Design',
+        feedback: "Developing elegant and seamless UI/UX designs that improve user experience!"
     },
     {
-        imgURL: customer2,
-        customerName: 'Lota Mongeskar',
-        rating: 4.5,
-        feedback: "The product not only met but exceeded my expectations. I'll definitely be a returning customer!"
+        imgURL: twitter,
+        backName: 'Responsive Web & Mobile Design',
+        feedback: "Services for responsive web design guarantee that a web solution will adapt to the size of the screen it is presented on!"
+    },
+    {
+        imgURL: twitter,
+        backName: 'Innovative Ideas',
+        feedback: "Creating websites that unique in the eyes of the user with ideas that will get their attention."
     }
 ];
 

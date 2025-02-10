@@ -13,7 +13,7 @@ const Hero = () => {
                    max-xl:py-40 max-sm:py-10"
       >
         {/* Background shape */}
-        <div className="absolute bg-gray-600 max-sm:w-[290px] max-sm:h-[290px] 
+        <div className="absolute bg-gray-600 max-sm:w-[280px] max-sm:h-[280px] max-sm:mb-9 max-sm:mr-9 
                         rounded-md w-[450px] h-[530px] opacity-70 translate-x-10 translate-y-10 -z-10"></div>
 
         {/* Profile Image */}
