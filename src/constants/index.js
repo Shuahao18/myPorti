@@ -1,10 +1,10 @@
 import { facebook, instagram, shieldTick, support, truckFast, twitter } from "../assets/icons";
-import { bigShoe1, bigShoe2, bigShoe3, customer2, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3 } from "../assets/images";
+import { bigShoe1, bigShoe2, bigShoe3, customer2, php, react, java, html, css, tailwind, python, js, csharp, firebase, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3 } from "../assets/images";
 
 export const navLinks = [
     { href: "#home", label: "Home" },
     { href: "#about-us", label: "About" },
-    { href: "#skills", label: "Skills" },
+    { href: "#skills", label: "skills" },
 
     { href: "#project", label: "Project" },
     { href: "#contact-us", label: "Contact" },
@@ -31,26 +31,22 @@ export const statistics = [
     { value: '250k+', label: 'Customers' },
 ];
 
-export const products = [
+export const skillsData = [
     {
-        imgURL: shoe4,
+        imgURL1: react,
         name: "Nike Air Jordan-01",
-        price: "$200.20",
     },
     {
         imgURL: shoe5,
         name: "Nike Air Jordan-10",
-        price: "$210.20",
     },
     {
         imgURL: shoe6,
         name: "Nike Air Jordan-100",
-        price: "$220.20",
     },
     {
         imgURL: shoe7,
         name: "Nike Air Jordan-001",
-        price: "$230.20",
     },
 ];
 

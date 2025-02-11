@@ -12,7 +12,19 @@ import logo from "./logo.png";
 import me from "./me.png";
 
 import offer from "./offer.svg";
-import arrow from "./arrow.png"
+import arrow from "./arrow.png";
+
+
+import css from "./css-logo.png";
+import java from "./java-logo.png";
+import firebase from "./firebase-logo2.png"
+import html from "./html5-logo.png";
+import js from "./js-logo.png";
+import php from "./php-logo.png";
+import python from "./python-logo.png";
+import react from "./react-logo.png";
+import csharp from "./csharp-logo.png";
+import tailwind from "./tailwind-logo.png";
 
 import shoe4 from "./shoe4.svg";
 import shoe5 from "./shoe5.svg";
@@ -37,6 +49,17 @@ export {
   me,
   skills,
   arrow,
+
+  css,
+  firebase,
+  html,
+  java,
+  js,
+  php,
+  python, 
+  react,
+  tailwind,
+  csharp,
 
   offer,
   shoe4,

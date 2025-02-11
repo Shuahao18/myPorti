@@ -8,7 +8,7 @@ const CustomerReviews = () => {
     id="about"
     className='max-container relative -mt-60'>
       
-      <div className="bg-slate-300 top-80 ">
+      <div className='bg-slate-300 top-80 '>
       <h3 className='font-palanquin text-center text-4xl font-bold'>
         What I
         <span className='text-coral-red'> Can </span>
