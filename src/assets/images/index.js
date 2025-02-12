@@ -25,6 +25,10 @@ import python from "./python-logo.png";
 import react from "./react-logo.png";
 import csharp from "./csharp-logo.png";
 import tailwind from "./tailwind-logo.png";
+import git from "./git.png";
+import github from "./github.png";
+import figma from "./figma.png";
+import sql from "./mysql-database.png";
 
 import shoe4 from "./shoe4.svg";
 import shoe5 from "./shoe5.svg";
@@ -60,6 +64,10 @@ export {
   react,
   tailwind,
   csharp,
+  git,
+  github,
+  figma,
+  sql,
 
   offer,
   shoe4,

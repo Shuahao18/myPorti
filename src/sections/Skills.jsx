@@ -1,4 +1,4 @@
-import { react } from "../assets/images"; // Import images
+import { react, js, java, tailwind, html, css, firebase, php, python, git , github, figma, sql } from "../assets/images"; // Import images
 
 const Skills = () => {
   return (
@@ -11,45 +11,61 @@ const Skills = () => {
         {/* Main Skills Container */}
         <div className="mt-8 flex flex-col gap-6 bg-slate-400 p-10 rounded-lg">
           
-          {/* Section Title and First Row */}
-          <div className="flex flex-col">
-            <h1 className="text-white font-bold mb-4">Framework</h1>
-
-            {/* First Row of Images */}
-            <div className="flex flex-row gap-4">
-              <div className="flex flex-row items-center bg-gray-600 p-4 rounded-md w-64 gap-4">
-                <img src={react} alt="React" className="w-[102px] h-[102px]" />
-                <h2 className="text-white">React.js</h2>
-              </div>
-
-              <div className="flex flex-row items-center bg-gray-600 p-4 rounded-md w-64 gap-4">
-                <img src={react} alt="Vue" className="w-[102px] h-[102px]" />
-                <h2 className="text-white">Vue.js</h2>
-              </div>
+          {/* Frameworks */}
+          <div>
+            <h1 className="text-white font-bold mb-4 text-center sm:text-left md:text-left">Framework</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols gap-4">
+              <SkillCard imgSrc={react} label="React.js" />
+              
             </div>
           </div>
 
-          {/* Second Row (Under the Same Main Container) */}
-          <div className="flex flex-col">
-            <h1 className="text-white font-bold mt-6 mb-4">Front-end</h1>
+          {/* Frontend Skills */}
+          <div>
+            <h1 className="text-white font-bold mt-6 mb-4">Front End</h1>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              <SkillCard imgSrc={html} label="HTML" />
+              <SkillCard imgSrc={css} label="CSS" />
+              <SkillCard imgSrc={js} label="JavaScript" />
+              <SkillCard imgSrc={tailwind} label="Tailwind" />
+            </div>
+          </div>
 
-            {/* Second Row of Images */}
-            <div className="flex flex-row gap-4">
-              <div className="flex flex-row items-center bg-gray-600 p-4 rounded-md w-64 gap-4">
-                <img src={react} alt="React" className="w-[102px] h-[102px]" />
-                <h2 className="text-white">React.js</h2>
-              </div>
+          {/* Backend Skills */}
+          <div>
+            <h1 className="text-white font-bold mt-6 mb-4">Back End</h1>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              <SkillCard imgSrc={firebase} label="Firebase" />
+              <SkillCard imgSrc={php} label="PHP" />
+              <SkillCard imgSrc={python} label="Python" />
+              <SkillCard imgSrc={java} label="Java" />
+              <SkillCard imgSrc={sql} label="MySQL" />
+            </div>
+          </div>
 
-              <div className="flex flex-row items-center bg-gray-600 p-4 rounded-md w-64 gap-4">
-                <img src={react} alt="Vue" className="w-[102px] h-[102px]" />
-                <h2 className="text-white">Vue.js</h2>
-              </div>
+          {/* Other Skills */}
+          <div>
+            <h1 className="text-white font-bold mt-6 mb-4">Others</h1>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-4">
+              <SkillCard imgSrc={github} label="GitHub" />
+              <SkillCard imgSrc={git} label="GIT" />
+              <SkillCard imgSrc={figma} label="Figma" />
             </div>
           </div>
 
         </div>
       </div>
     </section>
+  );
+};
+
+// Reusable Skill Card Component
+const SkillCard = ({ imgSrc, label }) => {
+  return (
+    <div className="flex flex-row items-center bg-white rounded-md w-full md:w-52 h-20 gap-4 p-2 shadow-md">
+      <img src={imgSrc} alt={label} className="w-[70px] h-[50px] bg-slate-500 m-2 rounded" />
+      <h2 className="text-zinc-950">{label}</h2>
+    </div>
   );
 };
 
