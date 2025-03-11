@@ -1,4 +1,5 @@
 import { facebook, instagram, shieldTick, support, truckFast, twitter } from "../assets/icons";
+import { todoapp} from "../assets/images";
 import { bigShoe1, bigShoe2, bigShoe3, customer2, php, react, java, html, css, tailwind, python, js, csharp, firebase, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3 } from "../assets/images";
 
 export const navLinks = [
@@ -84,6 +85,27 @@ export const reviews = [
         backName: 'Innovative Ideas',
         feedback: "Creating websites that unique in the eyes of the user with ideas that will get their attention."
     }
+];
+
+export const projects = [
+    {
+        imgURL: todoapp,
+        describe: 'Task app',
+        backfeed: "Developing elegant and seamless UI/UX designs that improve user experience!",
+       
+
+    },
+    {
+        imgURL: todoapp,
+        describe: 'Responsive Web & Mobile Design',
+        backfeed: "Services for responsive web design guarantee that a web solution will adapt to the size of the screen it is presented on!"
+    },
+    {
+        imgURL: todoapp,
+        describe: 'Innovative Ideas',
+        backfeed: "Creating websites that unique in the eyes of the user with ideas that will get their attention."
+    }
+    
 ];
 
 

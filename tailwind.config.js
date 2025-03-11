@@ -17,13 +17,23 @@ export default {
       fontFamily: {
         palanquin: ["Palanquin", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
+        'clash-display': ['Clash Display', 'sans-serif'],
+        humane: ['Humane', 'sans-serif'],
+
       },
       colors: {
-        primary: "#ECEEFF",
+        primary: '#18191A',
+        secondary: '#282A2C',
+        tertiary: '#736E6E',
+        text: '#D9D9D9',
+        seText: '#4C494A',
+        coralY: '#FFA601',
+
         "coral-yellow": "#D7A118",
         "slate-gray": "#6D6D6D",
         "pale-blue": "#F5F6FF",
         "white-400": "rgba(255, 255, 255, 0.80)",
+        
       },
       boxShadow: {
         "3xl": "0 10px 40px rgba(0, 0, 0, 0.1)",

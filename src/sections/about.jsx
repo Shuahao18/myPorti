@@ -8,7 +8,7 @@ const About = () => {
       
       {/* Left Section (Text) */}
       <div className="flex-1 flex flex-col justify-start z-10">
-        <h1 className="font-palanquin capitalize text-8xl max-sm:text-[40px] max-sm:absolute max-sm:top-16 font-bold max-sm:items-center">
+        <h1 className="font-humane capitalize text-8xl max-sm:text-[40px] max-sm:absolute max-sm:top-16 font-bold max-sm:items-center">
           Hel<span className="text-coral-yellow">lo!</span>
         </h1>
 

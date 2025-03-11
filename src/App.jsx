@@ -1,6 +1,6 @@
 import { Nav } from "./components";
 import {
-  CustomerReviews,
+  Project,
   Footer,
   Hero,
   About,
@@ -11,18 +11,18 @@ import {
 
 const App = () => {
   return (
-    <main className='relative'>
+    <main className='relative '>
       <Nav />
-      <section className='xl:padding-2 '>
+      <section className='xl:padding-2 bg-primary '>
         <Hero />
       </section>
-      <section className='padding bg-slate-200'>
+      <section className='padding '>
         <About />
       </section>
-      <section className='bg-pale-blue padding'>
+      <section className='bg-secondary padding'>
         <Service />
       </section>
-      <section className='padding'>
+      <section className='padding bg-primary'>
         <Skills />
       </section>
       {/* <section className='padding-x py-10'>
@@ -30,7 +30,7 @@ const App = () => {
       </section> */}
     
       <section className='bg-pale-blue padding'>
-        <CustomerReviews />
+        <Project />
       </section>
       <section className='padding-x sm:py-32 py-16 w-full'>
         <Subscribe />
