@@ -9,7 +9,7 @@ const CustomerReviews = () => {
     className='max-container relative -mt-60'>
       
       <div className='bg-primary top-80  '>
-      <h3 className='font-palanquin text-center text-4xl font-bold m-0  '>
+      <h3 className='font-palanquin text-center justify-center text-text text-4xl font-bold m-0  '>
         What I Can Provide?
       </h3>
     

@@ -5,7 +5,7 @@ import Skills from "./Skills";
 import Service from "./service";
 import Project from "./Project";
 import Subscribe from "./Subscribe";
-import Footer from "./Footer";
+import Contact from "./Contact";
 
 export {
   Hero,
@@ -15,5 +15,5 @@ export {
   Service,
   Project,
   Subscribe,
-  Footer,
+  Contact,
 };

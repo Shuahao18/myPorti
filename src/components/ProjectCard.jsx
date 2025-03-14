@@ -1,5 +1,5 @@
 
-const ProjectCard = ({ imgURL, describe, rating, backfeed }) => {
+const ProjectCard = ({ imgURL,imgURL1,imgURL2, imgURL3, imgURL4, imgURL5, describe, rating, backfeed }) => {
   return (
     <div className='flex justify-center items-center flex-col'>
       <img
@@ -13,23 +13,26 @@ const ProjectCard = ({ imgURL, describe, rating, backfeed }) => {
       <p className='mt-6 max-w-sm text-center info-text'>{backfeed}</p>
       <div className='mt-3 flex justify-center items-center gap-2.5'>
        
-         <div className="grid grid-cols-3 gap-5"> 
+         <div className="grid grid-cols-3 gap-10 items-center justify-center"> 
          <img
-           src={imgURL}
+           src={imgURL1}
            alt='customer'
-           className=' object-fill w-[100px] h-50px]'
+           className=' object-fill w-[70px] h-50px]'
          />
           <img
-           src={imgURL}
+           src={imgURL2}
            alt='customer'
-           className=' object-fill w-[100px] h-100px]'
+           className=' object-fill w-[70px] h-100px]'
          />
 
          <img
-           src={imgURL}
+           src={imgURL3}
            alt='customer'
-           className=' object-fill w-[100px] h-100px]'
+           className=' object-fill w-[70px] h-100px]'
          />
+
+          
+
          </div>
       
       </div>

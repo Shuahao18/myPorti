@@ -1,6 +1,6 @@
 import { facebook, instagram, shieldTick, support, truckFast, twitter } from "../assets/icons";
 import { todoapp} from "../assets/images";
-import { bigShoe1, bigShoe2, bigShoe3, customer2, php, react, java, html, css, tailwind, python, js, csharp, firebase, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3 } from "../assets/images";
+import { bigShoe1, bigShoe2, bigShoe3, customer2, sql, php, react, java, html, css, tailwind, python, js, csharp, firebase, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3 } from "../assets/images";
 
 export const navLinks = [
     { href: "#home", label: "Home" },
@@ -92,45 +92,33 @@ export const projects = [
         imgURL: todoapp,
         describe: 'Task app',
         backfeed: "Developing elegant and seamless UI/UX designs that improve user experience!",
-       
+        imgURL1: php,
+        imgURL2: sql,
+        imgURL3: tailwind
 
     },
     {
         imgURL: todoapp,
         describe: 'Responsive Web & Mobile Design',
-        backfeed: "Services for responsive web design guarantee that a web solution will adapt to the size of the screen it is presented on!"
+        backfeed: "Services for responsive web design guarantee that a web solution will adapt to the size of the screen it is presented on!",
+        imgURL4: react,
+        imgURL5: firebase,
+        imgURL6: tailwind
     },
     {
         imgURL: todoapp,
         describe: 'Innovative Ideas',
-        backfeed: "Creating websites that unique in the eyes of the user with ideas that will get their attention."
+        backfeed: "Creating websites that unique in the eyes of the user with ideas that will get their attention.",
+        imgURL7: php,
+        imgURL8: sql,
+        imgURL9: tailwind
     }
     
 ];
 
 
 export const footerLinks = [
-    {
-        title: "Products",
-        links: [
-            { name: "Air Force 1", link: "/" },
-            { name: "Air Max 1", link: "/" },
-            { name: "Air Jordan 1", link: "/" },
-            { name: "Air Force 2", link: "/" },
-            { name: "Nike Waffle Racer", link: "/" },
-            { name: "Nike Cortez", link: "/" },
-        ],
-    },
-    {
-        title: "Help",
-        links: [
-            { name: "About us", link: "/" },
-            { name: "FAQs", link: "/" },
-            { name: "How it works", link: "/" },
-            { name: "Privacy policy", link: "/" },
-            { name: "Payment policy", link: "/" },
-        ],
-    },
+    
     {
         title: "Get in touch",
         links: [
