@@ -6,7 +6,7 @@ const ReviewCard = ({ imgURL, backName, rating, feedback }) => {
       <img
         src={imgURL}
         alt='customer'
-        className='rounded-full object-cover w-[120px] h-[120px]'
+        className='rounded-full object-cover w-[100px] h-[100px]'
       />
        <h3 className='mt-1 font-palanquin text-3xl text-center font-bold'>
         {backName}

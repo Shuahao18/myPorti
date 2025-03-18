@@ -24,11 +24,13 @@ const Project = () => {
             imgURL1={project.imgURL1}
             imgURL2={project.imgURL2}
             imgURL3={project.imgURL3}
-
+           
         
           />
         ))}
       </div>
+
+      
     </section>
   );
 };

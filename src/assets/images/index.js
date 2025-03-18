@@ -42,7 +42,9 @@ import thumbnailShoe2 from "./thumbnail-shoe2.svg";
 import thumbnailShoe3 from "./thumbnail-shoe3.svg";
 
 import todoapp from "./todoapp.jpg";
-
+import innova from "./innovative.png";
+import response from "./respponsive.png";
+import ux from "./ux.png"
 export {
   bigShoe1,
   bigShoe2,
@@ -82,5 +84,8 @@ export {
   thumbnailShoe2,
   thumbnailShoe3,
 
-  todoapp
+  todoapp,
+  innova,
+  response,
+  ux
 };

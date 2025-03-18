@@ -1,6 +1,6 @@
 import { facebook, instagram, shieldTick, support, truckFast, twitter } from "../assets/icons";
-import { todoapp} from "../assets/images";
-import { bigShoe1, bigShoe2, bigShoe3, customer2, sql, php, react, java, html, css, tailwind, python, js, csharp, firebase, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3 } from "../assets/images";
+import { todoapp, response, ux, innova} from "../assets/images";
+import { bigShoe1, bigShoe2, bigShoe3, customer2,sql, php, react, java, html, css, tailwind, python, js, csharp, firebase, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3 } from "../assets/images";
 
 export const navLinks = [
     { href: "#home", label: "Home" },
@@ -71,17 +71,17 @@ export const services = [
 
 export const reviews = [
     {
-        imgURL: twitter,
+        imgURL: ux,
         backName: 'UI/UX Design',
         feedback: "Developing elegant and seamless UI/UX designs that improve user experience!"
     },
     {
-        imgURL: twitter,
+        imgURL: response,
         backName: 'Responsive Web & Mobile Design',
         feedback: "Services for responsive web design guarantee that a web solution will adapt to the size of the screen it is presented on!"
     },
     {
-        imgURL: twitter,
+        imgURL: innova,
         backName: 'Innovative Ideas',
         feedback: "Creating websites that unique in the eyes of the user with ideas that will get their attention."
     }
