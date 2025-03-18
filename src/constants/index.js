@@ -92,28 +92,20 @@ export const projects = [
         imgURL: todoapp,
         describe: 'Task app',
         backfeed: "Developing elegant and seamless UI/UX designs that improve user experience!",
-        imgURL1: php,
-        imgURL2: sql,
-        imgURL3: tailwind
-
+        techStack: [php, sql, tailwind]
     },
     {
         imgURL: todoapp,
         describe: 'Responsive Web & Mobile Design',
         backfeed: "Services for responsive web design guarantee that a web solution will adapt to the size of the screen it is presented on!",
-        imgURL4: react,
-        imgURL5: firebase,
-        imgURL6: tailwind
+        techStack: [react, firebase, tailwind]
     },
     {
         imgURL: todoapp,
         describe: 'Innovative Ideas',
-        backfeed: "Creating websites that unique in the eyes of the user with ideas that will get their attention.",
-        imgURL7: php,
-        imgURL8: sql,
-        imgURL9: tailwind
+        backfeed: "Creating websites that are unique in the eyes of the user with ideas that will get their attention.",
+        techStack: [php, sql, tailwind]
     }
-    
 ];
 
 
