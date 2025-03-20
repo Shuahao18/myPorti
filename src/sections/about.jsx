@@ -8,13 +8,13 @@ const About = () => {
       
       {/* Left Section (Text) */}
       <div className="flex-1 flex flex-col justify-start z-10">
-        <h1 className="font-humane capitalize text-8xl max-sm:text-[40px] max-sm:absolute max-sm:top-16 font-bold max-sm:items-center">
+        <h1 className="font-humane capitalize text-8xl max-sm:text-[40px] max-sm:absolute max-sm:top-36 font-bold max-sm:items-center">
           Hel<span className="text-coral-yellow">lo!</span>
         </h1>
 
         {/* Large "ABOUT ME" Text (Fixed for Small Screens) */}
         <div className="absolute max-sm:relative flex justify-center items-center -z-10">
-          <h1 className="font-palanquin text-[290px] max-sm:text-[80px] max-sm:hidden font-bold text-lightGray opacity-10 pointer-events-none leading-none">
+          <h1 className="font-palanquin text-[290px] max-sm:text-[66px] max-sm:bottom-40 max-sm:absolute font-bold text-lightGray opacity-10 pointer-events-none leading-none">
             ABOUT ME
           </h1>
         </div>

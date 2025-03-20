@@ -13,7 +13,7 @@ const Hero = () => {
     <section
       id="home"
       ref={ref}
-      className="w-full flex xl:flex-row flex-col gap-5 max-container justify-center min-h-screen "
+      className="w-full flex xl:flex-row flex-col  max-container justify-center min-h-screen "
     >
       {/* Left side (Image) */}
       <motion.div
@@ -43,7 +43,7 @@ const Hero = () => {
         animate={inView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative xl:w-2/3 flex flex-col justify-center place-items-end
-                   w-full max-xl:padding-x pt-28 max-sm:pt-10 max-sm:items-center"
+                   w-full max-xl:padding-y pt-28 max-sm:pt-10 max-sm:items-center"
       >
         <h1 className="mt-10  text-[70px] text-center max-sm:text-[55px] max-sm:leading-[45px] 
                        max-sm:mt-4 font-bold font-clash-display text-text">
