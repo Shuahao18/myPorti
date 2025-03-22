@@ -4,17 +4,17 @@ const About = () => {
   return (
     <section 
       id="about-us"
-      className="relative flex max-xl:flex-col-reverse gap-10 max-container scroll-mt-20 pt-20 pb-20 z-0">
+      className="relative flex max-xl:flex-col-reverse gap-2 lg:gap-10 max-container scroll-mt-20 pt-20 pb-20 z-0">
       
       {/* Left Section (Text) */}
       <div className="flex-1 flex flex-col justify-start z-10">
-        <h1 className="font-humane capitalize text-8xl max-sm:text-[40px] max-sm:absolute max-sm:top-36 font-bold max-sm:items-center">
+<h1 className="font-humane capitalize lg:text-8xl text-[90px] sm:absolute sm:top-46 font-bold text-center">
           Hel<span className="text-coral-yellow">lo!</span>
         </h1>
 
         {/* Large "ABOUT ME" Text (Fixed for Small Screens) */}
         <div className="absolute max-sm:relative flex justify-center items-center -z-10">
-          <h1 className="font-palanquin text-[290px] max-sm:text-[66px] max-sm:bottom-40 max-sm:absolute font-bold text-lightGray opacity-10 pointer-events-none leading-none">
+          <h1 className="font-palanquin lg:text-[290px] text-8xl  lg:bottom-4 bottom-64 absolute lg:relative font-bold text-lightGray opacity-10 pointer-events-none leading-none">
             ABOUT ME
           </h1>
         </div>
@@ -40,7 +40,7 @@ const About = () => {
           alt="About Me"
           width={500}
           height={400}
-          className="max-w-full object-contain max-sm:h-[300px] max-sm:relative max-sm:left-28"
+          className="max-w-full object-contain h-[500px] lg:h-[700px] max-sm:relative max-sm:left-28"
         />
 
         {/* Rotated Facebook Link (Fixed for Small Screens) */}

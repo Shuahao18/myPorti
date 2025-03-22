@@ -116,7 +116,7 @@ const Footer = () => {
             height={20}
             className='rounded-full m-0'
           />
-          <p>Copyright. All rights reserved.</p>
+          <p>Copyright ©2025 All rights reserved | Made by Joshua Meredores.</p>
         </div>
       </div>
     </footer>

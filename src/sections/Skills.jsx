@@ -23,32 +23,25 @@ const Skills = () => {
       <div className="flex flex-col justify-start gap-5">
         <h2 className="text-4xl font-humane font-bold text-text">My Skills</h2>
 
-        {/* Hover Image Display */}
-        <div className="absolute bottom-[90px] right-10 transition-opacity duration-300">
-          <img
-            src={hoveredSkill || skillsList[currentIndex]}
-            alt="Hovered Skill"
-            className="w-[200px] h-[200px] object-contain opacity-100"
-          />
-        </div>
+      
 
         {/* Main Skills Container */}
         <div className="mt-8 flex flex-col gap-6 bg-text p-10 rounded-lg">
-          {/* Frameworks */}
-          <div>
-            <h1 className="text-primary font-bold mt-6 mb-4">Framework</h1>
-            <div className="flex flex-wrap justify-start gap-4">
-              
-              <SkillCard imgSrc={react} label="React.js" setHoveredSkill={setHoveredSkill} />
 
-            </div>
-          </div>
 
-          {/* Frontend Skills */}
+ {/* Frameworks */}
+ <div>
+   <h1 className="text-primary font-bold mt-6 mb-4 text-center lg:text-left">Framework</h1>
+   <div className="flex flex-wrap justify-start max-sm:justify-center gap-4">
+     
+     <SkillCard imgSrc={react} label="React.js" setHoveredSkill={setHoveredSkill} />
+   </div>
+ </div>
+ {/* Frontend Skills */}
     
 <div>
-  <h1 className="text-primary font-bold mt-6 mb-4">Front End</h1>
-  <div className="flex flex-wrap justify-start gap-4 sm:grid sm:grid-cols-2">
+  <h1 className="text-primary font-bold mt-6 mb-4 text-center lg:text-left">Front End</h1>
+  <div className="flex flex-wrap justify-start max-sm:justify-center gap-4 ">
     <SkillCard imgSrc={html} label="HTML" setHoveredSkill={setHoveredSkill} />
     <SkillCard imgSrc={css} label="CSS" setHoveredSkill={setHoveredSkill} />
     <SkillCard imgSrc={js} label="JavaScript" setHoveredSkill={setHoveredSkill} />
@@ -58,8 +51,8 @@ const Skills = () => {
 
 {/* Backend Skills */}
 <div>
-  <h1 className="text-primary font-bold mt-6 mb-4">Back End</h1>
-  <div className="flex flex-wrap justify-start gap-4">
+  <h1 className="text-primary font-bold mt-6 mb-4 text-center lg:text-left">Back End</h1>
+  <div className="flex flex-wrap justify-start max-sm:justify-center gap-4">
     <SkillCard imgSrc={firebase} label="Firebase" setHoveredSkill={setHoveredSkill} />
     <SkillCard imgSrc={php} label="PHP" setHoveredSkill={setHoveredSkill} />
     <SkillCard imgSrc={python} label="Python" setHoveredSkill={setHoveredSkill} />
@@ -70,15 +63,21 @@ const Skills = () => {
 
 {/* Other Skills */}
 <div>
-  <h1 className="text-primary font-bold mt-6 mb-4">Others</h1>
-  <div className="flex flex-wrap justify-start gap-4">
+  <h1 className="text-primary font-bold mt-6 mb-4 text-center lg:text-left">Others</h1>
+  <div className="flex flex-wrap justify-start max-sm:justify-center gap-4">
     <SkillCard imgSrc={github} label="GitHub" setHoveredSkill={setHoveredSkill} />
     <SkillCard imgSrc={git} label="GIT" setHoveredSkill={setHoveredSkill} />
     <SkillCard imgSrc={figma} label="Figma" setHoveredSkill={setHoveredSkill} />
   </div>
 </div>
 
-
+              <div className="sm:absolute bottom-[90px] right-16 justify-center flex sm:align-center transition-opacity duration-300">
+                        <img
+                          src={hoveredSkill || skillsList[currentIndex]}
+                          alt="Hovered Skill"
+                          className="w-[200px] h-[200px] object-contain opacity-100"
+                        />
+              </div>
         </div>
       </div>
     </section>
@@ -89,15 +88,18 @@ const Skills = () => {
 const SkillCard = ({ imgSrc, label, setHoveredSkill }) => {
   return (
     <div
-      className="flex items-center bg-white rounded-md min-w-[120px]  max-w-fit px-4 py-2 shadow-md cursor-pointer"
+      className="flex items-center bg-white rounded-md px-2 py-1 gap-2 shadow-md cursor-pointer 
+                 min-w-[90px] min-h-[60px] max-w-fit sm:min-w-[120px] sm:px-4 sm:py-2"
       onMouseEnter={() => setHoveredSkill(imgSrc)}
       onMouseLeave={() => setHoveredSkill(null)}
     >
-      <img src={imgSrc} alt={label} className="w-[50px] h-[50px] bg-slate-500 rounded" />
-      <h2 className="text-zinc-950 whitespace-nowrap">{label}</h2>
+      <img src={imgSrc} alt={label} className="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] bg-slate-500 rounded" />
+      <h2 className="text-zinc-950 text-sm sm:text-base">{label}</h2>
     </div>
   );
 };
+
+
 
 
 export default Skills;
