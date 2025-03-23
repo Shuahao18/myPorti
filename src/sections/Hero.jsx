@@ -30,11 +30,12 @@ const Hero = () => {
 
         {/* Profile Image */}
         <img
-          src={profileImage}
-          alt="profile"
-          className="object-cover w-[300px] h-[300px] rounded-md z-10
-                    sm:w-[350px] sm:h-[350px] md:w-[400px] md:h-[400px] lg:w-[450px] lg:h-[500px]"
-        />
+  src={profileImage}
+  alt="profile"
+  className="object-cover w-[300px] h-[300px] rounded-md z-10
+             sm:w-[350px] sm:h-[350px] md:h-[500px] md:w-[450px] lg:w-[450px] lg:h-[500px]"
+/>
+
       </motion.div>
 
       {/* Right side (Text) */}
@@ -43,7 +44,7 @@ const Hero = () => {
         animate={inView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative xl:w-2/3 flex flex-col justify-center place-items-end
-                   w-full max-xl:padding-y pt-28 max-sm:pt-10 max-sm:items-center"
+                   w-full max-xl:padding-y pt-28 max-sm:pt-10 max-sm:items-center md:items-center"
       >
         <h1 className="mt-10  text-[70px] text-center max-sm:text-[55px] max-sm:leading-[45px] 
                        max-sm:mt-4 font-bold font-clash-display text-text">
