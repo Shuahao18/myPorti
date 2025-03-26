@@ -3,7 +3,7 @@ import { projects } from "../constants";
 
 const Project = () => {
   return (
-    <section id="project" className="max-container">
+    <section id="project" className="w-full max-container">
       <h3 className="text-4xl font-humane text-center font-bold">
         Sample <span className="text-coral-red">Projects</span>
       </h3>

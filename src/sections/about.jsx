@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section 
       id="about-us"
-      className="relative flex max-xl:flex-col-reverse gap-2 lg:gap-10 max-container scroll-mt-20 pt-20 pb-20 z-0">
+      className="w-full relative flex max-xl:flex-col-reverse gap-2 lg:gap-10 max-container scroll-mt-20 pt-20 pb-20 z-0 overflow-x: hidden;">
       
       {/* Left Section (Text) */}
       <div className="flex-1 flex flex-col justify-start z-10">

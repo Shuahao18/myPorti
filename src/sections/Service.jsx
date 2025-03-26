@@ -6,7 +6,7 @@ const CustomerReviews = () => {
     
     <section
     id="about"
-    className='max-container relative -mt-60'>
+    className='w-full relative -mt-60'>
       
       <div className='bg-primary top-80  '>
       <h3 className='font-palanquin text-center justify-center text-text text-4xl font-bold m-0  '>
