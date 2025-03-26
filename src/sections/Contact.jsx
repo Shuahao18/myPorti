@@ -18,15 +18,19 @@ const Footer = () => {
              in front-end web development, ensuring satisfactory projects for clients.
           </p>
           <div className='flex items-center gap-5 mt-8'>
-            {socialMedia.map((icon) => (
-              <div
-                className='flex justify-center items-center w-12 h-12 bg-white rounded-full'
-                key={icon.alt}
-              >
-                <img src={icon.src} alt={icon.alt} width={24} height={24} />
-              </div>
-            ))}
-          </div>
+  {socialMedia.map((icon) => (
+    <a
+      href={icon.link} // Add the social media link here
+      key={icon.alt}
+      target="_blank" // Opens in a new tab
+      rel="noopener noreferrer" // Security best practice
+      className='flex justify-center items-center w-12 h-12 bg-white rounded-full'
+    >
+      <img src={icon.src} alt={icon.alt} width={24} height={24} />
+    </a>
+  ))}
+</div>
+
         </div>
 
         {/* Center - Contact Us Form */}
@@ -43,11 +47,12 @@ const Footer = () => {
                 Name
               </label>
               <input
-                type='text'
-                className='w-full px-4 py-2 border border-gray-600 rounded-md bg-black text-white focus:outline-none focus:ring-2 focus:ring-gray-500'
-                placeholder='Your Name'
+                type="text"
+                className="w-full px-4 py-2 border border-gray-600 rounded-md bg-black text-white focus:outline-none focus:ring-2 focus:ring-gray-500 sm:w-full md:w-96 lg:w-full"
+                placeholder="Your Name"
                 required
               />
+
             </div>
             <div className='mb-4'>
               <label className='block text-gray-300 text-sm font-medium mb-2'>
@@ -87,7 +92,7 @@ const Footer = () => {
             <div className='w-full h-64 rounded-lg overflow-hidden'>
             <iframe
     title='Google Maps Location'
-    className='w-full h-full border-none'
+    className='w-full h-full border-none md:w-96'
     src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14736.425940472202!2d121.1503651971476!3d14.74854359222731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x123456789abcdef%3A0xabcdef123456789!2sYour%20Location!5e0!3m2!1sen!2sph!4vXXXXXXXXXX'
     width='100%'
     height='100%'

@@ -1,5 +1,5 @@
 import { facebook, instagram, shieldTick, support, truckFast, twitter } from "../assets/icons";
-import { todoapp, response, ux, innova} from "../assets/images";
+import { todoapp, response, ux, innova, github} from "../assets/images";
 import { bigShoe1, bigShoe2, bigShoe3, customer2,sql, php, react, java, html, css, tailwind, python, js, csharp, firebase, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3 } from "../assets/images";
 
 export const navLinks = [
@@ -121,7 +121,7 @@ export const footerLinks = [
 ];
 
 export const socialMedia = [
-    { src: facebook, alt: "facebook logo" },
-    { src: twitter, alt: "twitter logo" },
-    { src: instagram, alt: "instagram logo" },
+    { src: facebook, alt: "facebook logo", link:"https://www.facebook.com/Shua.meredores.16" },
+    { src: github, alt: "github logo", link:"https://github.com/Shuahao18" },
+    { src: instagram, alt: "instagram logo" , link:"https://www.instagram.com/shuahaooo/" },
 ];

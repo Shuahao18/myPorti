@@ -31,8 +31,8 @@ const Skills = () => {
 
  {/* Frameworks */}
  <div>
-   <h1 className="text-primary font-bold mt-6 mb-4 text-center lg:text-left">Framework</h1>
-   <div className="flex flex-wrap justify-start max-sm:justify-center gap-4">
+   <h1 className="text-primary font-bold mt-6 mb-4 text-center md:justify-center lg:text-left">Framework</h1>
+   <div className="flex flex-wrap justify-start max-sm:justify-center md:justify-center lg:justify-start gap-4">
      
      <SkillCard imgSrc={react} label="React.js" setHoveredSkill={setHoveredSkill} />
    </div>
@@ -40,8 +40,8 @@ const Skills = () => {
  {/* Frontend Skills */}
     
 <div>
-  <h1 className="text-primary font-bold mt-6 mb-4 text-center lg:text-left">Front End</h1>
-  <div className="flex flex-wrap justify-start max-sm:justify-center gap-4 ">
+  <h1 className="text-primary font-bold mt-6 mb-4 text-center md:justify-center lg:text-left">Front End</h1>
+  <div className="flex flex-wrap justify-start max-sm:justify-center md:justify-center lg:justify-start gap-4 ">
     <SkillCard imgSrc={html} label="HTML" setHoveredSkill={setHoveredSkill} />
     <SkillCard imgSrc={css} label="CSS" setHoveredSkill={setHoveredSkill} />
     <SkillCard imgSrc={js} label="JavaScript" setHoveredSkill={setHoveredSkill} />
@@ -51,8 +51,8 @@ const Skills = () => {
 
 {/* Backend Skills */}
 <div>
-  <h1 className="text-primary font-bold mt-6 mb-4 text-center lg:text-left">Back End</h1>
-  <div className="flex flex-wrap justify-start max-sm:justify-center gap-4">
+  <h1 className="text-primary font-bold mt-6 mb-4 text-center md:justify-center lg:text-left">Back End</h1>
+  <div className="flex flex-wrap justify-start max-sm:justify-center md:justify-center lg:justify-start gap-4">
     <SkillCard imgSrc={firebase} label="Firebase" setHoveredSkill={setHoveredSkill} />
     <SkillCard imgSrc={php} label="PHP" setHoveredSkill={setHoveredSkill} />
     <SkillCard imgSrc={python} label="Python" setHoveredSkill={setHoveredSkill} />
@@ -63,15 +63,16 @@ const Skills = () => {
 
 {/* Other Skills */}
 <div>
-  <h1 className="text-primary font-bold mt-6 mb-4 text-center lg:text-left">Others</h1>
-  <div className="flex flex-wrap justify-start max-sm:justify-center gap-4">
+  <h1 className="text-primary font-bold mt-6 mb-4 text-center md:justify-center lg:text-left">Others</h1>
+  <div className="flex flex-wrap justify-center md:justify-center lg:justify-start gap-4">
     <SkillCard imgSrc={github} label="GitHub" setHoveredSkill={setHoveredSkill} />
     <SkillCard imgSrc={git} label="GIT" setHoveredSkill={setHoveredSkill} />
     <SkillCard imgSrc={figma} label="Figma" setHoveredSkill={setHoveredSkill} />
   </div>
 </div>
 
-              <div className="sm:absolute bottom-[90px] right-16 justify-center flex sm:align-center transition-opacity duration-300">
+
+              <div className="sm:absolute bottom-[90px] md:relative md:bottom-1 md:left-1 right-20 lg:absolute justify-center flex sm:align-center md:align-ctransition-opacity duration-300">
                         <img
                           src={hoveredSkill || skillsList[currentIndex]}
                           alt="Hovered Skill"
@@ -94,7 +95,7 @@ const SkillCard = ({ imgSrc, label, setHoveredSkill }) => {
       onMouseLeave={() => setHoveredSkill(null)}
     >
       <img src={imgSrc} alt={label} className="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] bg-slate-500 rounded" />
-      <h2 className="text-zinc-950 text-sm sm:text-base">{label}</h2>
+      <h2 className="text-zinc-950 font-humane text-sm font-bold sm:text-base">{label}</h2>
     </div>
   );
 };

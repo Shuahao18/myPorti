@@ -13,7 +13,7 @@ const Hero = () => {
     <section
       id="home"
       ref={ref}
-      className="w-full flex xl:flex-row flex-col  max-container justify-center min-h-screen "
+      className="w-full flex xl:flex-row flex-col gap-2 max-container justify-center min-h-screen "
     >
       {/* Left side (Image) */}
       <motion.div
