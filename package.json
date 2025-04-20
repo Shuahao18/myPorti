@@ -1,9 +1,11 @@
 {
+  "homepage": " https://shuahao18.github.io/myportfolio/",
   "name": "nike-2-0",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "deploy": "gh-pages -d dist",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
