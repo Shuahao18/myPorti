@@ -43,7 +43,7 @@ const About = () => {
     developer with savvy skills in front-end web development, ensuring
     satisfactory projects for clients.
   </p>
-  <p className="absolute top-80 max-sm:top-[420px] max-sm:right-[1px] mt-10 lg:max-w-lg md:max-w-sm info-text text-center sm:text-left max-sm:text-xs">
+  <p className="absolute top-80 max-sm:top-[400px] max-sm:right-[0px] mt-10 lg:max-w-lg md:max-w-sm info-text text-center sm:text-left max-sm:text-xs">
     Our dedication to detail <span className="hidden max-sm:inline"><br /></span>
     and excellence ensures<span className="hidden max-sm:inline"><br /></span> your satisfaction.
   </p>
@@ -58,12 +58,12 @@ const About = () => {
           alt="About Me"
           width={500}
           height={400}
-          className="max-w-full object-contain h-[500px] md:h-[600px] md:top-20 md:relative md:left-40 lg:h-[700px] relative bottom-30 max-sm:relative max-sm:left-24 max-sm:pt-10 "
+          className="max-w-full object-contain h-[500px] md:h-[600px] md:top-20 md:relative md:left-40 lg:h-[700px] relative bottom-30 max-sm:relative max-sm:left-20 max-sm:pt-10 "
         />
 
         {/* Rotated Facebook Link (Fixed for Small Screens) */}
         <p
-          className="absolute -right-40 bottom-40 max-sm:relative max-sm:right-0 max-sm:bottom-0 max-sm:mt-4 lg:max-w-lg max-sm:text-sm info-text text-center"
+          className="absolute -right-40 bottom-40 max-sm:relative max-sm:left-5 max-sm:mt-4 lg:max-w-lg max-sm:text-xs max-sm:bottom-10 info-text text-center"
           style={{
             transform: "rotate(-90deg)",
             whiteSpace: "nowrap",

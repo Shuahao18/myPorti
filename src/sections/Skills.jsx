@@ -72,7 +72,10 @@ const Skills = () => {
 </div>
 
 
-              <div className="sm:absolute bottom-[90px] md:relative md:bottom-1 md:left-1 right-20 lg:absolute justify-center flex sm:align-center md:align-ctransition-opacity duration-300">
+<div className="flex justify-center sm:absolute sm:bottom-[90px] sm:align-center 
+                md:relative md:bottom-1 md:left-1 md:right-1 
+                lg:absolute lg:right-12 lg:left-auto lg:justify-end 
+                transition-opacity duration-300">
                         <img
                           src={hoveredSkill || skillsList[currentIndex]}
                           alt="Hovered Skill"
