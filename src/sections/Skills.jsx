@@ -75,11 +75,11 @@ const Skills = () => {
 <div className="flex justify-center sm:absolute sm:bottom-[90px] sm:align-center 
                 md:relative md:bottom-1 md:left-1 md:right-1 
                 lg:absolute lg:right-12 lg:left-auto lg:justify-end 
-                transition-opacity duration-300">
+                transition-opacity duration-300 ">
                         <img
                           src={hoveredSkill || skillsList[currentIndex]}
                           alt="Hovered Skill"
-                          className="w-[200px] h-[200px] object-contain opacity-100"
+                          className="w-[200px] h-[200px] max-sm:h-[100px] object-contain opacity-100"
                         />
               </div>
         </div>
