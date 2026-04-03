@@ -1,78 +1,120 @@
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import { me } from "../assets/images";
 
 const About = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+  });
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+  };
+
   return (
     <section 
+      ref={ref}
       id="about-us"
-      className="w-full relative flex max-xl:flex-col-reverse gap-2 lg:gap-10 max-container scroll-mt-20 pt-20 pb-20 z-0 overflow-x-hidden;">
+      className="w-full relative flex max-xl:flex-col-reverse gap-12 max-container scroll-mt-20 py-20 z-0 overflow-x-hidden bg-white dark:bg-secondary transition-colors duration-300"
+    >
       
       {/* Left Section (Text) */}
-      <div className="flex-1 flex flex-col justify-start z-10">
-<h1
-  className="
-    font-humane capitalize lg:text-8xl 
-    text-[30px] sm:top-16 lg:absolute lg:top-20
-    md:absolute md:top-40 md:text-[60px] font-bold text-center
-    max-sm:absolute max-sm:top-0 max-sm:left-10 max-sm:-translate-x-1/2 max-sm:z-20
-  "
->
-  Hel<span className="text-coral-yellow">lo!</span>
-</h1>
- 
+      <motion.div 
+        variants={containerVariants}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        className="flex-1 flex flex-col justify-start z-10 px-4 sm:px-0"
+      >
+        {/* Section Title */}
+        <motion.div variants={itemVariants} className="mb-10 md:mb-12">
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold font-clash-display text-gray-900 dark:text-white mb-6 leading-none transition-colors duration-300">
+            Hey, I'm
+            <br />
+            <span className="text-gradient">Joshua</span>
+          </h1>
+          <div className="w-24 h-1.5 bg-gradient-to-r from-coralY to-transparent rounded-full"></div>
+        </motion.div>
 
-        {/* Large "ABOUT ME" Text (Fixed for Small Screens) */}
-        <div className="absolute max-sm:relative flex justify-center items-center -z-10 w-full">
-  <h1 className="font-palanquin lg:text-[290px] text-8xl md:text-[200px] 
-                 lg:bottom-4 bottom-36 md:bottom-32 absolute lg:relative 
-                 font-bold text-lightGray opacity-10 pointer-events-none 
-                 leading-none text-center md:left-1/2 md:-translate-x-1/2">
-    ABOUT ME
-  </h1>
-</div>
+        {/* Main Bio */}
+        <motion.p 
+          variants={itemVariants}
+          className="text-base sm:text-lg md:text-xl text-gray-700 dark:text-slate-gray font-montserrat leading-relaxed mb-12 max-w-3xl transition-colors duration-300"
+        >
+          I'm a passionate <span className="text-coralY font-semibold">Full Stack Developer</span> with a commitment to crafting 
+          responsive, beautiful applications that drive results. I specialize in modern tech stacks including <span className="text-coralY font-semibold">Python</span>, React, 
+          Node.js, and Tailwind CSS, building innovative solutions that exceed expectations.
+        </motion.p>
 
+        {/* Stats */}
+        <motion.div 
+          variants={itemVariants}
+          className="mb-12 py-8 md:py-10 border-y border-gray-200 dark:border-white/10 transition-colors duration-300"
+        >
+          <div>
+            <p className="text-4xl md:text-5xl font-bold text-coralY font-clash-display mb-2">2+</p>
+            <p className="text-xs md:text-sm text-gray-600 dark:text-slate-gray font-poppins tracking-wider uppercase transition-colors duration-300">Projects Completed</p>
+          </div>
+        </motion.div>
 
-        {/* Main Description */}
-        <div className="space-y-6 mt-10 md:grid md:grid-cols-2 md:max-w-xl md:ml-0 md:mr-auto">
-        <p className="info-text text-left sm:text-left text-2xl md:absolute md:bottom-14
-               absolute 
-               max-sm:top-10 max-sm:text-xs
-               lg:bottom-20 lg:top-auto lg-text-4xl
-               lg:max-w-lg md:max-w-sm">
-    I'm Joshua, a passionate web developer creating responsive websites
-    and building applications with innovative designs. I'm a starter
-    developer with savvy skills in front-end web development, ensuring
-    satisfactory projects for clients.
-  </p>
-  <p className="absolute top-80 max-sm:top-[400px] max-sm:right-[0px] mt-10 lg:max-w-lg md:max-w-sm info-text text-center sm:text-left max-sm:text-xs">
-    Our dedication to detail <span className="hidden max-sm:inline"><br /></span>
-    and excellence ensures<span className="hidden max-sm:inline"><br /></span> your satisfaction.
-  </p>
-</div>
+        {/* Key Points */}
+        <motion.div variants={itemVariants} className="space-y-5 md:space-y-6">
+          <div className="flex gap-4 items-start">
+            <div className="w-3 h-3 rounded-full bg-coralY mt-1.5 flex-shrink-0"></div>
+            <p className="text-base md:text-lg text-gray-700 dark:text-slate-gray font-montserrat leading-relaxed transition-colors duration-300">Expertise in React, Tailwind CSS, and modern JavaScript</p>
+          </div>
+          <div className="flex gap-4 items-start">
+            <div className="w-3 h-3 rounded-full bg-coralY mt-1.5 flex-shrink-0"></div>
+            <p className="text-base md:text-lg text-gray-700 dark:text-slate-gray font-montserrat leading-relaxed transition-colors duration-300">Responsive design with pixel-perfect attention to detail</p>
+          </div>
+          <div className="flex gap-4 items-start">
+            <div className="w-3 h-3 rounded-full bg-coralY mt-1.5 flex-shrink-0"></div>
+            <p className="text-base md:text-lg text-gray-700 dark:text-slate-gray font-montserrat leading-relaxed transition-colors duration-300">Performance optimization and accessibility best practices</p>
+          </div>
+        </motion.div>
+      </motion.div>
 
-      </div>
-
-      {/* Right Section (Image & Facebook Link) */}
-      <div className="relative flex-1 flex justify-center items-center z-10">
-        <img
+      {/* Right Section (Image) */}
+      <motion.div 
+        initial={{ x: 50, opacity: 0 }}
+        animate={inView ? { x: 0, opacity: 1 } : { x: 50, opacity: 0 }}
+        transition={{ duration: 0.9 }}
+        className="relative flex-1 flex justify-center items-center"
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-coralY/20 to-orange-500/10 rounded-2xl blur-3xl"></div>
+        
+        <motion.img
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.3 }}
           src={me}  
-          alt="About Me"
-          width={500}
-          height={400}
-          className="max-w-full object-contain h-[500px] md:h-[600px] md:top-20 md:relative md:left-40 lg:h-[700px] relative bottom-30 max-sm:relative max-sm:left-20 max-sm:pt-10 "
+          alt="Joshua - Full Stack Web Developer"
+          className="relative w-full max-w-md object-cover rounded-2xl shadow-2xl ring-4 ring-coralY/20 hover:ring-coralY/50 transition-all duration-300"
         />
 
-        {/* Rotated Facebook Link (Fixed for Small Screens) */}
-        <p
-          className="absolute -right-40 bottom-40 max-sm:relative max-sm:left-5 max-sm:mt-4 lg:max-w-lg max-sm:text-xs max-sm:bottom-10 info-text text-center"
-          style={{
-            transform: "rotate(-90deg)",
-            whiteSpace: "nowrap",
-          }}
+        {/* Social Link */}
+        <motion.div 
+          initial={{ y: 20, opacity: 0 }}
+          animate={inView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="absolute -bottom-8 left-1/2 transform -translate-x-1/2"
         >
-          <span className="sm:inline hidden">www.facebook.com/Shua.meredores.16</span>
-          <span className="sm:hidden">www.facebook.com/Shua.meredores.16</span>
-        </p>
-      </div>
+          <a href="https://facebook.com/Shua.meredores.16" target="_blank" rel="noopener noreferrer"
+             className="inline-block bg-white dark:bg-primary border border-coralY/30 px-4 py-2 rounded-full text-xs font-poppins text-coralY hover:bg-coralY/10 dark:hover:bg-coralY/10 hover:border-coralY transition-all duration-300">
+            facebook.com/Shua.meredores.16
+          </a>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

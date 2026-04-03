@@ -3,36 +3,33 @@ import {
   Project,
   Contact,
   Hero,
-  About,
   Skills,
   Service,
-  
 } from "./sections";
+import { ThemeProvider } from "./context/ThemeContext";
 
 const App = () => {
   return (
-    <main className='relative '>
-      <Nav />
-      <section className='xl:padding-2 bg-primary '>
-        <Hero />
-      </section>
-      <section className='padding '>
-        <About />
-      </section>
-      <section className='bg-secondary padding'>
-        <Service />
-      </section>
-      <section className='padding bg-primary'>
-        <Skills />
-      </section>
-      <section className='bg-pale-blue padding'>
-        <Project />
-      </section>
-   
-      <section className=' bg-black padding-x padding-t pb-8'>
-        <Contact />
-      </section>
-    </main>
+    <ThemeProvider>
+      <main className='relative bg-white dark:bg-primary transition-colors duration-300'>
+        <Nav />
+        <section className='xl:padding-2 bg-white dark:bg-primary'>
+          <Hero />
+        </section>
+        <section className='bg-white dark:bg-gradient-to-b dark:from-secondary dark:to-primary padding'>
+          <Service />
+        </section>
+        <section className='padding bg-gray-50 dark:bg-primary'>
+          <Skills />
+        </section>
+        <section className='bg-white dark:bg-gradient-to-b dark:from-primary dark:to-secondary padding'>
+          <Project />
+        </section>
+        <section className='bg-primary padding-x padding-t pb-8'>
+          <Contact />
+        </section>
+      </main>
+    </ThemeProvider>
   );
 };
 

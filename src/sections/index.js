@@ -1,5 +1,4 @@
 import Hero from "./Hero";
-import About from "./about";
 import Skills from "./Skills";
 
 import Service from "./service";
@@ -8,7 +7,6 @@ import Contact from "./Contact";
 
 export {
   Hero,
-  About,
   Skills,
   Service,
   Project,

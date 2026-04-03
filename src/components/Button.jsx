@@ -8,22 +8,25 @@ const Button = ({
 }) => {
   return (
     <button
-      className={`flex justify-center items-center gap-2 px-7 py-4 border font-montserrat text-lg leading-none
+      className={`flex justify-center items-center gap-2 px-8 py-4 border font-montserrat font-semibold text-base leading-none rounded-full transition-all duration-300 transform hover:scale-105 active:scale-95 hover:shadow-lg
       ${
         backgroundColor
-          ? `${backgroundColor} ${textColor} ${borderColor}`
-          : "bg-coral-red text-white border-coral-red"
-      } rounded-full ${fullWidth && "w-full"}`}
+          ? `${backgroundColor} ${textColor} ${borderColor} hover:shadow-lg`
+          : "bg-coralY text-black border-coralY hover:bg-opacity-90 shadow-lg hover:shadow-xl hover:shadow-coralY/20"
+      } ${fullWidth && "w-full"} relative overflow-hidden group`}
     >
-      {label}
-
-      {iconURL && (
-        <img
-          src={iconURL}
-          alt='arrow right icon'
-          className='ml-2 rounded-full bg-white w-5 h-5'
-        />
-      )}
+      <span className="relative z-10 flex items-center gap-2">
+        {label}
+        {iconURL && (
+          <img
+            src={iconURL}
+            alt='icon'
+            className='w-5 h-5 transition-transform duration-300 group-hover:translate-x-1'
+          />
+        )}
+      </span>
+      
+      <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-full"></div>
     </button>
   );
 };

@@ -1,10 +1,9 @@
 import { facebook, instagram, shieldTick, support, truckFast, twitter } from "../assets/icons";
-import { todoapp, response, ux, innova, github} from "../assets/images";
+import { todoapp, jobzing, response, ux, innova, github, hoa, pets} from "../assets/images";
 import { bigShoe1, bigShoe2, bigShoe3, customer2,sql, php, react, java, html, css, tailwind, python, js, csharp, firebase, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3 } from "../assets/images";
 
 export const navLinks = [
     { href: "#home", label: "Home" },
-    { href: "#about-us", label: "About" },
     { href: "#skills", label: "skills" },
 
     { href: "#project", label: "Project" },
@@ -89,22 +88,23 @@ export const reviews = [
 
 export const projects = [
     {
-        imgURL: todoapp,
-        describe: 'Task app',
-        backfeed: "Developing elegant and seamless UI/UX designs that improve user experience!",
-        techStack: [php, sql, tailwind]
+        imgURL: jobzing,
+        describe: 'JobZing - Job Portal App',
+        backfeed: "A comprehensive job posting and search platform that connects job seekers with thousands of opportunities from LinkedIn and OnlineJobs.ph with seamless application functionality.",
+        techStack: ['Python', 'Django', 'DRF', 'Celery', 'Redis', 'PostgreSQL', 'Vue.js 3', 'Vue Router', 'Vuex', 'Tailwind CSS', 'Axios'],
+        link: 'https://jobzing.app/'
     },
     {
-        imgURL: todoapp,
-        describe: 'Responsive Web & Mobile Design',
-        backfeed: "Services for responsive web design guarantee that a web solution will adapt to the size of the screen it is presented on!",
-        techStack: [react, firebase, tailwind]
+        imgURL: hoa,
+        describe: 'HOA MS - Management System',
+        backfeed: "Housing Owners Association Management System - A desktop application for managing HOA operations, services, and tenant relations with real-time data visualization and comprehensive administration tools.",
+        techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Electron', 'React Router', 'Firebase', 'Axios', 'Recharts', 'React Big Calendar', 'Heroicons', 'Lucide React', 'React Toastify']
     },
     {
-        imgURL: todoapp,
-        describe: 'Innovative Ideas',
-        backfeed: "Creating websites that are unique in the eyes of the user with ideas that will get their attention.",
-        techStack: [php, sql, tailwind]
+        imgURL: pets,
+        describe: 'Pawfect Feeder - Smart Pet Care App',
+        backfeed: "A mobile application that helps pet owners manage feeding schedules, track pet health, and receive smart reminders for pet care routines with real-time notifications.",
+        techStack: ['React Native', 'Expo SDK', 'Firebase Auth', 'AsyncStorage', 'React Navigation', 'React Native (Custom Fonts)']
     }
 ];
 

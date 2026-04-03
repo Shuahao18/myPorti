@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontSize: {
@@ -11,6 +12,7 @@ export default {
       "2xl": ["24px", "29.26px"],
       "3xl": ["28px", "50px"],
       "4xl": ["48px", "58px"],
+      "5xl": ["64px", "72px"],
       "8xl": ["96px", "106px"],
     },
     extend: {
@@ -19,7 +21,8 @@ export default {
         montserrat: ["Montserrat", "sans-serif"],
         'clash-display': ['Clash Display', 'sans-serif'],
         humane: ['Humane', 'sans-serif'],
-
+        poppins: ["Poppins", "sans-serif"],
+        'space-mono': ["Space Mono", "monospace"],
       },
       colors: {
         primary: '#18191A',
@@ -28,22 +31,48 @@ export default {
         text: '#D9D9D9',
         seText: '#4C494A',
         coralY: '#FFA601',
-
         "coral-yellow": "#D7A118",
         "slate-gray": "#6D6D6D",
         "pale-blue": "#F5F6FF",
         "white-400": "rgba(255, 255, 255, 0.80)",
-        
+        "dark-purple": "#1a1f35",
+        "accent-orange": "#FF6B35",
+        "accent-blue": "#2E86DE",
       },
       boxShadow: {
         "3xl": "0 10px 40px rgba(0, 0, 0, 0.1)",
+        "premium": "0 20px 60px rgba(0, 0, 0, 0.3)",
+        "glow": "0 0 30px rgba(255, 166, 1, 0.2)",
+        "hover": "0 10px 40px rgba(255, 166, 1, 0.15)",
+        "light-glow": "0 0 30px rgba(255, 166, 1, 0.1)",
       },
       backgroundImage: {
         hero: "url('assets/images/collection-background.svg')",
         card: "url('assets/images/thumbnail-background.svg')",
+        gradient: "linear-gradient(135deg, #18191A 0%, #282A2C 100%)",
+        "gradient-orange": "linear-gradient(135deg, #FFA601 0%, #FF6B35 100%)",
+        "gradient-light": "linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%)",
       },
       screens: {
         wide: "1440px",
+      },
+      backdropBlur: {
+        xs: "2px",
+        sm: "4px",
+        md: "12px",
+        lg: "16px",
+      },
+      spacing: {
+        128: "32rem",
+        144: "36rem",
+      },
+      animation: {
+        "fade-in-up": "fadeInUp 0.6s ease-out",
+        "fade-in-down": "fadeInDown 0.6s ease-out",
+        "slide-in-right": "slideInRight 0.6s ease-out",
+        "slide-in-left": "slideInLeft 0.6s ease-out",
+        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+        "float": "float 3s ease-in-out infinite",
       },
     },
   },
