@@ -15,6 +15,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px;
   --color-primary: #18191A;
   --color-secondary: #282A2C;
   --color-tertiary: #736E6E;
