@@ -1,5 +1,5 @@
 import { facebook, instagram, shieldTick, support, truckFast, twitter } from "../assets/icons";
-import { todoapp, jobzing, response, ux, innova, github, hoa, pets} from "../assets/images";
+import { todoapp, jobzing, jobs, response, ux, innova, github, hoa, pets} from "../assets/images";
 import { bigShoe1, bigShoe2, bigShoe3, customer2,sql, php, react, java, html, css, tailwind, python, js, csharp, firebase, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3 } from "../assets/images";
 
 export const navLinks = [
@@ -88,7 +88,7 @@ export const reviews = [
 
 export const projects = [
     {
-        imgURL: jobzing,
+        imgURL: jobs,
         describe: 'JobZing - Job Portal App',
         backfeed: "A comprehensive job posting and search platform that connects job seekers with thousands of opportunities from LinkedIn and OnlineJobs.ph with seamless application functionality.",
         techStack: ['Python', 'Django', 'DRF', 'Celery', 'Redis', 'PostgreSQL', 'Vue.js 3', 'Vue Router', 'Vuex', 'Tailwind CSS', 'Axios'],

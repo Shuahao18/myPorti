@@ -43,6 +43,7 @@ import thumbnailShoe3 from "./thumbnail-shoe3.svg";
 
 import todoapp from "./todoapp.jpg";
 import jobzing from "./jobzing.png";
+import jobs from "./jobs.png";
 import innova from "./innovative.png";
 import response from "./respponsive.png";
 import ux from "./ux.png";
@@ -90,6 +91,7 @@ export {
 
   todoapp,
   jobzing,
+  jobs,
   innova,
   response,
   ux,
