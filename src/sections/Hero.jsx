@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import profileImage from "../assets/images/joshua.png";
+import profileImage from "../assets/images/me.png";
 
 const Hero = () => {
   const { ref, inView } = useInView({
@@ -199,7 +199,7 @@ const Hero = () => {
 
             {/* Secondary button - Download CV */}
             <motion.a
-              href="/JOSHUA%20UMBAY%20MEREDORES%201%20(3).pdf"
+              href="/JOSH_MEREDORES.pdf"
               download
               whileHover={{ scale: 1.02, y: -2 }}
               whileTap={{ scale: 0.98 }}
