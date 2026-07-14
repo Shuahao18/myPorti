@@ -92,7 +92,7 @@ export const projects = [
         describe: 'JobZing - Job Portal App',
         backfeed: "A comprehensive job posting and search platform that connects job seekers with thousands of opportunities from LinkedIn and OnlineJobs.ph with seamless application functionality.",
         techStack: ['Python', 'Django', 'DRF', 'Celery', 'Redis', 'PostgreSQL', 'Vue.js 3', 'Vue Router', 'Vuex', 'Tailwind CSS', 'Axios'],
-        link: 'https://jobzing.app/'
+        link: 'https://jobzingapp.com/'
     },
     {
         imgURL: hoa,

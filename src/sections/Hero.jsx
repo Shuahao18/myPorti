@@ -231,10 +231,10 @@ const Hero = () => {
             className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 pt-4 text-sm text-gray-500 dark:text-gray-400"
           >
             <a 
-              href="mailto:joshuemeredores@gmail.com"
+              href="mailto:joshumbay5@gmail.com"
               className="hover:text-coralY transition-colors duration-300"
             >
-              joshuemeredores@gmail.com
+              joshumbay5@gmail.com
             </a>
             <span className="hidden sm:block text-gray-600">•</span>
             <span>+63 0909 357 5240</span>

@@ -141,8 +141,8 @@ const Contact = () => {
               <div className='space-y-4'>
                 <div>
                   <p className='text-xs font-poppins text-coralY tracking-widest mb-2'>EMAIL</p>
-                  <a href='mailto:joshuemeredores@gmail.com' className='text-gray-900 dark:text-white hover:text-coralY transition-colors duration-300'>
-                    joshuemeredores@gmail.com
+                  <a href='mailto:joshumbay5@gmail.com' className='text-gray-900 dark:text-white hover:text-coralY transition-colors duration-300'>
+                    joshumbay5@gmail.com
                   </a>
                 </div>
                 <div>

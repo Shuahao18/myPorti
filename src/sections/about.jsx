@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { me } from "../assets/images";
+import me from "../assets/images/Me.png";
 
 const About = () => {
   const { ref, inView } = useInView({
@@ -97,7 +97,7 @@ const About = () => {
         <motion.img
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
-          src={me}  
+          src={me + "?v=" + Date.now()}  
           alt="Joshua - Full Stack Web Developer"
           className="relative w-full max-w-md object-cover rounded-2xl shadow-2xl ring-4 ring-coralY/20 hover:ring-coralY/50 transition-all duration-300"
         />

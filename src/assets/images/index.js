@@ -9,7 +9,7 @@ import customer2 from "./customer2.svg";
 import footerLogo from "./footer-logo.svg";
 import headerLogo from "./header-logo.svg";
 import logo from "./logo.png";
-import me from "./me.png";
+import me from "./Me.png";
 
 import offer from "./offer.svg";
 import arrow from "./arrow.png";
