@@ -55,7 +55,7 @@ const App = () => {
           activeSection={!currentHash || currentHash === "#home" ? "home" : activeSection}
         />
         <Hero />
-        <div id="page-two" className="min-h-screen">
+        <div id="page-two" className="w-full">
           {activePageTwoSection}
         </div>
       </main>

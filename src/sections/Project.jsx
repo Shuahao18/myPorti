@@ -31,10 +31,10 @@ const Project = () => {
         variants={containerVariants}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
-        className="max-container py-20"
+        className="max-container px-5 sm:px-8 md:px-16 py-16 sm:py-20"
       >
         {/* Section Header */}
-        <motion.div variants={itemVariants} className="mb-20 sm:mb-24">
+        <motion.div variants={itemVariants} className="mb-12 sm:mb-20 md:mb-24">
           <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-transparent bg-gradient-to-r from-coralY to-orange-300 bg-clip-text mb-4 leading-tight break-words max-w-full">
             Sample Projects
           </h2>
@@ -68,7 +68,7 @@ const Project = () => {
                 </div>
 
                 {/* Content Container */}
-                <div className="p-8">
+                <div className="p-5 sm:p-8">
                   {/* Title */}
                   <h3 className="text-xl sm:text-2xl font-bold text-black font-poppins mb-2 transition-colors duration-300">
                     {project.describe}
