@@ -35,7 +35,7 @@ const Project = () => {
       >
         {/* Section Header */}
         <motion.div variants={itemVariants} className="mb-20 sm:mb-24">
-          <h2 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-transparent bg-gradient-to-r from-coralY to-orange-300 bg-clip-text mb-4 leading-tight break-words">
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-transparent bg-gradient-to-r from-coralY to-orange-300 bg-clip-text mb-4 leading-tight break-words max-w-full">
             Sample Projects
           </h2>
           <p className="font-poppins text-gray-700 text-base sm:text-lg max-w-2xl transition-colors duration-300">
@@ -46,7 +46,7 @@ const Project = () => {
         {/* Projects Grid */}
         <motion.div
           variants={containerVariants}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12"
+          className="grid grid-cols-1 gap-8 xl:grid-cols-2 xl:gap-12"
         >
           {projects.map((project, index) => (
             <motion.div

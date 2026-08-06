@@ -65,7 +65,7 @@ const Hero = () => {
 
           <motion.h1
             variants={itemVariants}
-            className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.05] mb-6 sm:mb-8"
+            className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-[1.05] mb-6 sm:mb-8 max-w-full break-words"
           >
             Joshua
            

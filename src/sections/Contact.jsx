@@ -36,7 +36,7 @@ const Contact = () => {
             Talk to me
           </div>
 
-          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight text-[#111111] max-w-3xl">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight text-[#111111] max-w-3xl">
             Build something bold together.
           </h2>
 
@@ -75,7 +75,7 @@ const Contact = () => {
               </h3>
             </div>
 
-            <div className="grid gap-6 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
               <label className="block">
                 <div className="mb-3 text-sm uppercase tracking-[0.35em] text-[#b98c2f] font-semibold">
                   Your Name
