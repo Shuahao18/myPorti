@@ -13,7 +13,7 @@ const Contact = () => {
     <section
       ref={ref}
       id="contact-us"
-      className="relative overflow-hidden overflow-x-hidden w-full bg-[#f8f5ef] px-6 py-32 sm:px-10 lg:px-16"
+      className="relative overflow-hidden w-full bg-[#f8f5ef] px-6 py-32 sm:px-10 lg:px-16"
     >
       <div className="section-bg-pattern absolute inset-0 pointer-events-none" />
       <div className="absolute inset-x-0 top-6 hidden md:block">
@@ -45,7 +45,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="relative z-10 min-w-0">
+        <div className="relative z-10">
           <div className="absolute -top-10 -right-10 hidden lg:block">
             <div className="h-32 w-32 rounded-full bg-[#fddc8f]/20 blur-3xl" />
           </div>
@@ -75,8 +75,8 @@ const Contact = () => {
               </h3>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-2">
-              <label className="block min-w-0">
+            <div className="grid gap-6 sm:grid-cols-2">
+              <label className="block">
                 <div className="mb-3 text-sm uppercase tracking-[0.35em] text-[#b98c2f] font-semibold">
                   Your Name
                 </div>
@@ -124,9 +124,7 @@ const Contact = () => {
             </button>
           </form>
         </div>
-
       </motion.div>
-
     </section>
   );
 };

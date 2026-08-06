@@ -25,7 +25,7 @@ const Project = () => {
   };
 
   return (
-    <section ref={ref} id="project" className="relative overflow-hidden overflow-x-hidden w-full bg-white transition-colors duration-300">
+    <section ref={ref} id="project" className="relative overflow-hidden w-full bg-white transition-colors duration-300">
       <div className="section-bg-pattern absolute inset-0 pointer-events-none" />
       <motion.div
         variants={containerVariants}
@@ -46,7 +46,7 @@ const Project = () => {
         {/* Projects Grid */}
         <motion.div
           variants={containerVariants}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 md:gap-10 lg:gap-12"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12"
         >
           {projects.map((project, index) => (
             <motion.div
@@ -54,7 +54,7 @@ const Project = () => {
               variants={itemVariants}
               whileHover={{ translateY: -10 }}
             >
-              <div className="group h-full min-w-0 bg-gray-50 dark:bg-white/5 backdrop-blur-sm border border-gray-200 dark:border-white/10 rounded-2xl overflow-hidden hover:border-coralY/50 transition-all duration-300 hover:shadow-2xl hover:shadow-coralY/20">
+              <div className="group h-full bg-gray-50 dark:bg-white/5 backdrop-blur-sm border border-gray-200 dark:border-white/10 rounded-2xl overflow-hidden hover:border-coralY/50 transition-all duration-300 hover:shadow-2xl hover:shadow-coralY/20">
                 {/* Image Container */}
                 <div className="relative h-48 sm:h-64 overflow-hidden bg-gradient-to-b from-coralY/20 to-transparent">
                   <motion.img
@@ -130,7 +130,6 @@ const Project = () => {
           ))}
         </motion.div>
       </motion.div>
-
     </section>
   );
 };
