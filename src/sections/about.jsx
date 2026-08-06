@@ -52,7 +52,7 @@ const About = () => {
           variants={itemVariants}
           className="text-base sm:text-lg md:text-xl text-gray-700 dark:text-slate-gray font-montserrat leading-relaxed mb-12 max-w-3xl transition-colors duration-300"
         >
-          I'm a passionate <span className="text-coralY font-semibold">Full Stack Developer</span> with a commitment to crafting 
+          I'm a passionate <span className="text-coralY font-semibold">Software Developer</span> with a commitment to crafting 
           responsive, beautiful applications that drive results. I specialize in modern tech stacks including <span className="text-coralY font-semibold">Python</span>, React, 
           Node.js, and Tailwind CSS, building innovative solutions that exceed expectations.
         </motion.p>
@@ -98,7 +98,7 @@ const About = () => {
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
           src={me + "?v=" + Date.now()}  
-          alt="Joshua - Full Stack Web Developer"
+          alt="Joshua - Software Developer"
           className="relative w-full max-w-md object-cover rounded-2xl shadow-2xl ring-4 ring-coralY/20 hover:ring-coralY/50 transition-all duration-300"
         />
 

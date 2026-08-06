@@ -4,8 +4,7 @@ import { bigShoe1, bigShoe2, bigShoe3, customer2,sql, php, react, java, html, cs
 
 export const navLinks = [
     { href: "#home", label: "Home" },
-    { href: "#skills", label: "skills" },
-
+    { href: "#skills", label: "Skills" },
     { href: "#project", label: "Project" },
     { href: "#contact-us", label: "Contact" },
 ];
@@ -88,7 +87,7 @@ export const reviews = [
 
 export const projects = [
     {
-        imgURL: jobs,
+        imgURL: jobzing,
         describe: 'JobZing - Job Portal App',
         backfeed: "A comprehensive job posting and search platform that connects job seekers with thousands of opportunities from LinkedIn and OnlineJobs.ph with seamless application functionality.",
         techStack: ['Python', 'Django', 'DRF', 'Celery', 'Redis', 'PostgreSQL', 'Vue.js 3', 'Vue Router', 'Vuex', 'Tailwind CSS', 'Axios'],
@@ -98,13 +97,15 @@ export const projects = [
         imgURL: hoa,
         describe: 'HOA MS - Management System',
         backfeed: "Housing Owners Association Management System - A desktop application for managing HOA operations, services, and tenant relations with real-time data visualization and comprehensive administration tools.",
-        techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Electron', 'React Router', 'Firebase', 'Axios', 'Recharts', 'React Big Calendar', 'Heroicons', 'Lucide React', 'React Toastify']
+        techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Electron', 'React Router', 'Firebase', 'Axios', 'Recharts', 'React Big Calendar', 'Heroicons', 'Lucide React', 'React Toastify'],
+        link: 'https://httpstat.us/404'
     },
     {
         imgURL: pets,
         describe: 'Pawfect Feeder - Smart Pet Care App',
         backfeed: "A mobile application that helps pet owners manage feeding schedules, track pet health, and receive smart reminders for pet care routines with real-time notifications.",
-        techStack: ['React Native', 'Expo SDK', 'Firebase Auth', 'AsyncStorage', 'React Navigation', 'React Native (Custom Fonts)']
+        techStack: ['React Native', 'Expo SDK', 'Firebase Auth', 'AsyncStorage', 'React Navigation', 'React Native (Custom Fonts)'],
+        link: 'https://httpstat.us/404'
     }
 ];
 

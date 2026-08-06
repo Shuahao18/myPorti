@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joshua Meredores - CV</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f5f2ed;
+      color: #111111;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { min-height: 100vh; background: #f5f2ed; }
+    .page { max-width: 1000px; margin: 0 auto; padding: 48px 24px; }
+    .panel { background: rgba(255,255,255,0.95); border: 1px solid rgba(0,0,0,0.06); border-radius: 32px; box-shadow: 0 24px 80px rgba(17,17,17,0.08); overflow: hidden; }
+    .section { padding: 40px 48px; }
+    .head { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: start; }
+    .title { font-size: clamp(3rem, 5vw, 4.8rem); line-height: 0.95; letter-spacing: -0.06em; font-weight: 800; }
+    .subtitle { color: #7b6954; margin-top: 16px; font-size: 1rem; max-width: 620px; line-height: 1.8; }
+    .details { display: grid; gap: 12px; font-size: 0.95rem; color: #5f584a; }
+    .details span { display: block; }
+    .label { text-transform: uppercase; letter-spacing: 0.24em; font-size: 0.72rem; color: #b58f31; margin-bottom: 14px; font-weight: 700; }
+    .row { display: grid; gap: 24px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+    .content-block { margin-bottom: 32px; }
+    .content-block:last-child { margin-bottom: 0; }
+    .block-title { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.24em; color: #b58f31; margin-bottom: 16px; font-weight: 700; }
+    .item-title { font-size: 1.05rem; font-weight: 700; color: #111111; margin-bottom: 8px; }
+    .item-subtitle { color: #7b6954; font-size: 0.95rem; margin-bottom: 10px; }
+    .item-date { color: #9a8c72; font-size: 0.88rem; }
+    .text { color: #4d4b49; line-height: 1.8; font-size: 0.96rem; }
+    .list { list-style: none; padding-left: 0; margin-top: 12px; color: #4d4b49; }
+    .list li { position: relative; padding-left: 18px; margin-bottom: 10px; }
+    .list li::before { content: "•"; position: absolute; left: 0; top: 0; color: #b58f31; }
+    .split-grid { display: grid; gap: 24px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+    .badge { background: #fff4dc; border: 1px solid rgba(181,143,49,0.35); color: #8a5f12; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center; padding: 10px 16px; font-size: 0.86rem; margin: 4px 8px 4px 0; }
+    .footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; margin-top: 12px; color: #7b6954; font-size: 0.95rem; }
+    .footer span { display: inline-flex; align-items: center; gap: 10px; }
+    .bg-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 14rem; color: rgba(17,17,17,0.035); font-weight: 900; letter-spacing: -0.2em; white-space: nowrap; pointer-events: none; user-select: none; }
+    @media (max-width: 900px) {
+      .row, .split-grid { grid-template-columns: 1fr; }
+      .head { grid-template-columns: 1fr; }
+      .bg-text { font-size: 9rem; }
+    }
+    @media (max-width: 600px) {
+      .page { padding: 24px 16px; }
+      .section { padding: 28px 24px; }
+      .title { font-size: 3rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="panel">
+      <div class="section" style="position: relative; overflow: hidden;">
+        <div class="bg-text">CONTACT</div>
+        <div class="head">
+          <div>
+            <div class="title">Joshua Umbay Meredores</div>
+            <p class="subtitle">Software Developer with experience in web application development, cloud deployment, database systems, and system optimization. Strong communicator and collaborative problem-solver focused on building dependable digital products.</p>
+          </div>
+          <div class="details">
+            <span><strong>Address:</strong> Blk 196 Lot 1 Phase 4 San Isidro • Rodriguez, Rizal 1860</span>
+            <span><strong>Email:</strong> joshuemeredores@gmail.com</span>
+            <span><strong>Phone:</strong> +63 909 357 5240</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="content-block">
+          <div class="block-title">Education</div>
+          <div class="row">
+            <div>
+              <div class="item-title">Colegio De Montalban</div>
+              <div class="item-subtitle">Bachelor of Science in Information Technology</div>
+              <div class="item-date">Rodriguez, Rizal</div>
+            </div>
+            <div>
+              <div class="item-title">Asian Institute of Computer Studies</div>
+              <div class="item-subtitle">Senior High School Graduate</div>
+              <div class="item-date">Rodriguez, Rizal</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-block">
+          <div class="block-title">Experience</div>
+          <div class="item-title">Software Developer</div>
+          <div class="item-subtitle">Elevate Solutions Experts</div>
+          <div class="item-date">February 2025 – December 2025 • Rodriguez, Rizal</div>
+          <ul class="list">
+            <li>Enhanced job application automation features, including follow-up tracking and background task processing.</li>
+            <li>Developed user interface improvements for job tracking, application management, and workflow visibility.</li>
+            <li>Optimized backend performance through database query improvements, model refinement, and cleaner application logic.</li>
+            <li>Assisted with AWS EC2, Nginx, WSGI configuration and Django Administration updates for an existing production environment.</li>
+          </ul>
+        </div>
+
+        <div class="content-block">
+          <div class="block-title">On The Job Training</div>
+          <div class="item-subtitle">Rodriguez, Rizal</div>
+          <div class="item-date">January 2026 – April 2026</div>
+          <ul class="list">
+            <li>Improved UI components for cleaner, more user-friendly application workflows.</li>
+            <li>Managed database updates and supported system data maintenance tasks.</li>
+            <li>Fixed bugs, improved performance, and collaborated on feature implementation.</li>
+            <li>Enhanced Vue.js web application features and supported AWS environment updates.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="content-block">
+          <div class="block-title">Relevant Coursework</div>
+          <ul class="list">
+            <li>DSWD - KALAHI CIDSS Cash for Work Program</li>
+            <li>Public Attorney’s Office - Data Encoder and Document Management</li>
+          </ul>
+        </div>
+
+        <div class="content-block">
+          <div class="block-title">Technical Skills</div>
+          <div class="split-grid">
+            <div>
+              <span class="badge">Software Development</span>
+              <span class="badge">Python</span>
+              <span class="badge">PHP</span>
+              <span class="badge">Next.js</span>
+              <span class="badge">React</span>
+            </div>
+            <div>
+              <span class="badge">React Native</span>
+              <span class="badge">TypeScript</span>
+              <span class="badge">AWS</span>
+              <span class="badge">Git</span>
+              <span class="badge">GitHub</span>
+            </div>
+            <div>
+              <span class="badge">Vercel</span>
+              <span class="badge">Database Management</span>
+              <span class="badge">Django</span>
+              <span class="badge">Microsoft Excel</span>
+              <span class="badge">Microsoft Word</span>
+            </div>
+            <div>
+              <span class="badge">Microsoft PowerPoint</span>
+              <span class="badge">Technical Support</span>
+              <span class="badge">Troubleshooting</span>
+              <span class="badge">Operating Systems</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-block">
+          <div class="block-title">Professional Skills</div>
+          <ul class="list">
+            <li>Analytical Thinking</li>
+            <li>Problem Solving</li>
+            <li>Communication</li>
+            <li>Collaboration</li>
+            <li>Interpersonal Skills</li>
+          </ul>
+        </div>
+
+        <div class="content-block">
+          <div class="block-title">Languages</div>
+          <div class="footer">
+            <span>English</span>
+            <span>Filipino</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

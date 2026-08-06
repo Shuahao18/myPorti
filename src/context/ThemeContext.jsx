@@ -10,9 +10,7 @@ export const ThemeProvider = ({ children }) => {
     if (stored) {
       setIsDark(stored === 'dark');
     } else {
-      // Check system preference
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      setIsDark(prefersDark);
+      setIsDark(true);
     }
   }, []);
 

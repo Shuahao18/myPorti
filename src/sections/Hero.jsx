@@ -1,247 +1,161 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import profileImage from "../assets/images/me.png";
 
 const Hero = () => {
-  const { ref, inView } = useInView({
-    triggerOnce: false,
-    threshold: 0.2,
-  });
+  const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.2 });
+  const [activeSection, setActiveSection] = useState(
+    window.location.hash ? window.location.hash.replace("#", "") : "home"
+  );
 
-  // Animation variants
+  useEffect(() => {
+    const handleHashChange = () => {
+      setActiveSection(window.location.hash ? window.location.hash.replace("#", "") : "home");
+    };
+
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
+
+  const getNavLinkClasses = (section) => {
+    const isActive = activeSection === section;
+    return `font-poppins text-sm sm:text-base font-medium transition-colors duration-300 pb-1 border-b-[3px] ${
+      isActive ? "text-white border-gold" : "text-white hover:text-gold/80 border-transparent"
+    }`;
+  };
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.1,
-      },
+      transition: { staggerChildren: 0.12, delayChildren: 0.1 },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { duration: 0.8, ease: [0.25, 0.4, 0.25, 1] } 
+    hidden: { opacity: 0, y: 24 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.7, ease: [0.25, 0.4, 0.25, 1] },
     },
   };
-
-  const imageVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: { 
-      opacity: 1, 
-      scale: 1, 
-      transition: { duration: 1, ease: [0.25, 0.4, 0.25, 1] } 
-    },
-  };
-
-  // Stats data
-  const stats = [
-    { value: "3+", label: "Projects Completed" },
-    { value: "25+", label: "Technologies" },
-    { value: "2+", label: "Years Experience" },
-  ];
 
   return (
     <section
       id="home"
       ref={ref}
-      className="w-full min-h-screen bg-white dark:bg-gradient-to-br dark:from-primary dark:via-primary dark:to-secondary transition-colors duration-500 pt-16 md:pt-20 lg:pt-0 overflow-hidden"
+      className="relative overflow-visible w-full min-h-screen bg-primary flex flex-col justify-between"
     >
-      <div className="max-container w-full flex xl:flex-row flex-col gap-12 md:gap-16 lg:gap-20 justify-center items-center py-12 lg:py-0">
-        {/* Left side - Profile Image */}
-        <motion.div
-          variants={imageVariants}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          className="relative flex-1 w-full max-xl:max-w-sm max-sm:max-w-xs mx-auto flex justify-center items-center xl:min-h-screen 
-                     max-xl:py-12 max-sm:py-8 z-0 order-2 xl:order-1"
-        >
-          {/* Soft glowing gradient background */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] md:w-[480px] md:h-[480px] rounded-full 
-                            bg-gradient-to-br from-coralY/30 via-orange-500/20 to-coralY/10 
-                            blur-3xl animate-pulse-glow" />
-          </div>
-          
-          {/* Secondary glow ring */}
-          <div className="absolute w-[280px] h-[280px] sm:w-[340px] sm:h-[340px] md:w-[440px] md:h-[440px] 
-                          rounded-full border border-coralY/20 animate-float" />
-
-          {/* Profile Image with enhanced styling */}
-          <motion.div
-            whileHover={{ scale: 1.03 }}
-            transition={{ duration: 0.4, ease: [0.25, 0.4, 0.25, 1] }}
-            className="relative z-20"
-          >
-            <div className="relative">
-              {/* Image container with subtle border glow */}
-              <div className="absolute -inset-1 bg-gradient-to-br from-coralY/50 to-orange-500/30 
-                              rounded-2xl blur-sm opacity-75 group-hover:opacity-100 transition-opacity duration-500" />
-              
-              <img
-                src={profileImage}
-                alt="Joshua Meredores - Full Stack Developer"
-                className="relative object-cover w-[280px] h-[280px] sm:w-[340px] sm:h-[340px] 
-                           md:w-[420px] md:h-[420px] lg:w-[440px] lg:h-[440px] 
-                           rounded-2xl z-20 shadow-2xl shadow-coralY/20 
-                           transition-all duration-500 hover:shadow-coralY/40"
-              />
-            </div>
-          </motion.div>
-
-        </motion.div>
-
-        {/* Right side - Content */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          className="relative flex-1 w-full flex flex-col justify-center px-4 sm:px-6 md:px-8 lg:px-10
-                     pt-4 sm:pt-8 md:pt-12 lg:pt-0 items-center text-center xl:items-start xl:text-left xl:pl-8 
-                     space-y-6 sm:space-y-8 order-1 xl:order-2"
-        >
-          {/* Name with premium typography */}
-          <motion.h1 
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        className="max-container w-full flex-1 flex flex-col lg:flex-row items-center gap-12 lg:gap-16 px-8 sm:px-16 pt-16 pb-28"
+      >
+        {/* Left — Text Content */}
+        <div className="flex-1 w-full">
+          <motion.p
             variants={itemVariants}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black font-clash-display 
-                       text-coralY leading-[0.9] tracking-tight"
+            className="text-gold font-poppins font-semibold text-[10px] sm:text-xs tracking-[0.3em] uppercase mb-8 sm:mb-10"
           >
-            <span className="block">JOSHUA</span>
-            <span className="block">MEREDORES</span>
-          </motion.h1>
-
-          {/* Full Stack Developer with gradient */}
-          <motion.h2 
-            variants={itemVariants}
-            className="text-2xl sm:text-3xl md:text-4xl font-bold font-poppins
-                       bg-gradient-to-r from-coralY via-orange-400 to-coralY 
-                       bg-clip-text text-transparent"
-          >
-            Full Stack Developer
-          </motion.h2>
-
-          {/* Description */}
-          <motion.p 
-            variants={itemVariants}
-            className="text-gray-600 dark:text-gray-400 font-montserrat text-base sm:text-lg 
-                       max-w-md leading-relaxed"
-          >
-            Building modern web applications with clean code and intuitive design. 
-            Passionate about creating seamless user experiences.
+            Software Developer
           </motion.p>
 
-          {/* Divider */}
+          <motion.h1
+            variants={itemVariants}
+            className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.05] mb-6 sm:mb-8"
+          >
+            Joshua
+           
+            Meredores
+          </motion.h1>
+
+          <motion.p
+            variants={itemVariants}
+            className="font-poppins text-white text-sm sm:text-base md:text-lg font-medium tracking-[0.15em] uppercase max-w-2xl mb-8 sm:mb-10 leading-relaxed"
+          >
+            Building modern web applications with clean code and intuitive design
+          </motion.p>
+
           <motion.div
             variants={itemVariants}
-            className="w-20 h-0.5 bg-gradient-to-r from-coralY to-transparent rounded-full"
-          />
-
-          {/* Stats */}
-          <motion.div 
-            variants={itemVariants}
-            className="flex justify-center xl:justify-start gap-8 sm:gap-12"
+            className="flex flex-wrap items-center gap-4 sm:gap-6 mb-8 sm:mb-10"
           >
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ delay: 0.8 + index * 0.1, duration: 0.5 }}
-                className="text-center"
-              >
-                <div className="text-2xl sm:text-3xl font-black font-clash-display text-coralY">
-                  {stat.value}
-                </div>
-                <div className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 font-medium mt-1">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
+            <span className="text-gold font-poppins font-bold text-xs sm:text-sm tracking-[0.2em] uppercase">
+              joshuemeredores@gmail.com · 09093575240
+            </span>
           </motion.div>
 
-          {/* CTA Buttons */}
-          <motion.div 
+          <motion.p
             variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-4 pt-2"
+            className="font-poppins text-text/80 text-sm sm:text-base max-w-xl leading-relaxed font-light"
           >
-            {/* Primary button - View Projects */}
-            <motion.a
+            Passionate about creating seamless user experiences across the full
+            stack. Proficient in React, Python, and modern web technologies —
+            ready to build systems that scale.
+          </motion.p>
+
+          <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mt-10">
+            <a
               href="#project"
-              whileHover={{ scale: 1.02, y: -2 }}
-              whileTap={{ scale: 0.98 }}
-              className="group flex items-center justify-center gap-2 px-8 py-4 
-                        bg-gradient-to-r from-coralY to-orange-500 
-                        text-black font-semibold font-poppins rounded-full
-                        shadow-lg shadow-coralY/25 hover:shadow-coralY/40 
-                        transition-all duration-300"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gold text-primary font-poppins font-semibold text-sm rounded-full hover:bg-gold/90 transition-colors duration-300"
             >
               View Projects
-              <svg
-                className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </motion.a>
-
-            {/* Secondary button - Download CV */}
-            <motion.a
-              href="/JOSH_MEREDORES.pdf"
-              download
-              whileHover={{ scale: 1.02, y: -2 }}
-              whileTap={{ scale: 0.98 }}
-              className="group flex items-center justify-center gap-2 px-8 py-4 
-                        border-2 border-coralY text-coralY font-semibold font-poppins rounded-full
-                        hover:bg-coralY/10 transition-all duration-300"
-            >
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 4v10m0 0l-4-4m4 4l4-4M4 20h16"
-                />
-              </svg>
-              Download CV
-            </motion.a>
-          </motion.div>
-
-          {/* Contact info - subtle */}
-          <motion.div 
-            variants={itemVariants}
-            className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 pt-4 text-sm text-gray-500 dark:text-gray-400"
-          >
-            <a 
-              href="mailto:joshumbay5@gmail.com"
-              className="hover:text-coralY transition-colors duration-300"
-            >
-              joshumbay5@gmail.com
             </a>
-            <span className="hidden sm:block text-gray-600">•</span>
-            <span>+63 0909 357 5240</span>
+            <a
+              href="/Joshua_Meredores%20(1).pdf"
+              download="JOSH_MEREDORES.pdf"
+              className="inline-flex items-center gap-2 px-6 py-3 border border-gold/40 text-gold font-poppins font-semibold text-sm rounded-full hover:bg-gold/10 transition-colors duration-300"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v10m0 0l-4-4m4 4l4-4M4 20h16" />
+              </svg>
+              View CV
+            </a>
           </motion.div>
+        </div>
 
+        {/* Right — Profile Photo */}
+        <motion.div
+          variants={itemVariants}
+          className="flex-1 w-full flex justify-center lg:justify-end"
+        >
+          <div className="relative">
+            <div className="absolute -inset-3 border border-gold/20 rounded-2xl" />
+            <div className="absolute -inset-1.5 border border-gold/10 rounded-2xl" />
+            <img
+              src={profileImage}
+              alt="Joshua Meredores"
+              className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[340px] lg:h-[340px] object-cover rounded-2xl grayscale-[20%] hover:grayscale-0 transition-all duration-500"
+            />
+          </div>
         </motion.div>
-      </div>
+      </motion.div>
+
+      {/* Bottom Navigation — Home only (page 1) */}
+      <nav id="hero-bottom-nav" className="relative hidden md:block w-full border-t border-white/10 bg-primary/90 backdrop-blur-xl mt-10">
+        <div className="max-container px-8 sm:px-16">
+          <ul className="flex items-center justify-start gap-8 sm:gap-12 py-5 sm:py-6">
+            <li>
+              <a href="#home" className={getNavLinkClasses("home")}>Home</a>
+            </li>
+            <li>
+              <a href="#skills" className={getNavLinkClasses("skills")}>Skills</a>
+            </li>
+            <li>
+              <a href="#project" className={getNavLinkClasses("project")}>Project</a>
+            </li>
+            <li>
+              <a href="#contact-us" className={getNavLinkClasses("contact-us")}>Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </section>
   );
 };

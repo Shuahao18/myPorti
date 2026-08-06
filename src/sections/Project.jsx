@@ -25,7 +25,8 @@ const Project = () => {
   };
 
   return (
-    <section ref={ref} id="project" className="w-full bg-white dark:bg-primary transition-colors duration-300">
+    <section ref={ref} id="project" className="relative overflow-hidden w-full bg-white transition-colors duration-300">
+      <div className="section-bg-pattern absolute inset-0 pointer-events-none" />
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -34,10 +35,10 @@ const Project = () => {
       >
         {/* Section Header */}
         <motion.div variants={itemVariants} className="mb-16">
-          <h2 className="text-5xl md:text-6xl font-bold font-clash-display text-gray-900 dark:text-white mb-4 transition-colors duration-300">
-            Sample <span className="text-gradient">Projects</span>
+          <h2 className="font-serif text-5xl sm:text-6xl md:text-7xl font-bold text-transparent bg-gradient-to-r from-coralY to-orange-300 bg-clip-text mb-5 leading-tight">
+            Sample Projects
           </h2>
-          <p className="text-gray-600 dark:text-slate-gray font-montserrat text-lg max-w-2xl transition-colors duration-300">
+          <p className="font-poppins text-gray-700 text-lg max-w-2xl transition-colors duration-300">
             A selection of my recent work showcasing full-stack development capabilities and design excellence.
           </p>
         </motion.div>
@@ -45,7 +46,7 @@ const Project = () => {
         {/* Projects Grid */}
         <motion.div 
           variants={containerVariants}
-          className="grid sm:grid-cols-1 lg:grid-cols-2 gap-10"
+          className="grid sm:grid-cols-1 lg:grid-cols-2 gap-12"
         >
           {projects.map((project, index) => (
             <motion.div

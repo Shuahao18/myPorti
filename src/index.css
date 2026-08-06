@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -15,12 +16,14 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px;
-  --color-primary: #18191A;
-  --color-secondary: #282A2C;
+  scroll-padding-top: 80px;
+  background-color: #111111;
+  --color-primary: #111111;
+  --color-secondary: #1a1a1a;
   --color-tertiary: #736E6E;
   --color-text: #D9D9D9;
-  --color-coralY: #FFA601;
+  --color-coralY: #f1b82d;
+  --color-gold: #f1b82d;
   --color-slate-gray: #6D6D6D;
 }
 
@@ -94,6 +97,30 @@ html.light {
   100% {
     background-position: 1000px 0;
   }
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(40px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(40px) rotate(-360deg);
+  }
+}
+
+.animate-orbit-dot {
+  animation: orbit 4s linear infinite;
+}
+
+.contact-bg-pattern,
+.section-bg-pattern {
+  background-image:
+    radial-gradient(circle at 8% 10%, rgba(185,140,47,0.18) 0%, transparent 22%),
+    radial-gradient(circle at 85% 8%, rgba(17,17,17,0.08) 0%, transparent 18%),
+    linear-gradient(rgba(17,17,17,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17,17,17,0.08) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 50px 50px, 50px 50px;
+  opacity: 0.55;
 }
 
 @keyframes float {
