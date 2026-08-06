@@ -34,19 +34,19 @@ const Project = () => {
         className="max-container py-20"
       >
         {/* Section Header */}
-        <motion.div variants={itemVariants} className="mb-16">
-          <h2 className="font-serif text-5xl sm:text-6xl md:text-7xl font-bold text-transparent bg-gradient-to-r from-coralY to-orange-300 bg-clip-text mb-5 leading-tight">
+        <motion.div variants={itemVariants} className="mb-20 sm:mb-24">
+          <h2 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-transparent bg-gradient-to-r from-coralY to-orange-300 bg-clip-text mb-4 leading-tight break-words">
             Sample Projects
           </h2>
-          <p className="font-poppins text-gray-700 text-lg max-w-2xl transition-colors duration-300">
+          <p className="font-poppins text-gray-700 text-base sm:text-lg max-w-2xl transition-colors duration-300">
             A selection of my recent work showcasing full-stack development capabilities and design excellence.
           </p>
         </motion.div>
 
         {/* Projects Grid */}
-        <motion.div 
+        <motion.div
           variants={containerVariants}
-          className="grid sm:grid-cols-1 lg:grid-cols-2 gap-12"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12"
         >
           {projects.map((project, index) => (
             <motion.div
@@ -56,13 +56,13 @@ const Project = () => {
             >
               <div className="group h-full bg-gray-50 dark:bg-white/5 backdrop-blur-sm border border-gray-200 dark:border-white/10 rounded-2xl overflow-hidden hover:border-coralY/50 transition-all duration-300 hover:shadow-2xl hover:shadow-coralY/20">
                 {/* Image Container */}
-                <div className="relative h-64 overflow-hidden bg-gradient-to-b from-coralY/20 to-transparent">
+                <div className="relative h-48 sm:h-64 overflow-hidden bg-gradient-to-b from-coralY/20 to-transparent">
                   <motion.img
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.3 }}
                     src={project.imgURL}
                     alt={project.describe}
-                    className="w-full h-full object-cover"
+                      className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div>
                 </div>
@@ -70,12 +70,12 @@ const Project = () => {
                 {/* Content Container */}
                 <div className="p-8">
                   {/* Title */}
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white font-poppins mb-2 transition-colors duration-300">
+                  <h3 className="text-xl sm:text-2xl font-bold text-black font-poppins mb-2 transition-colors duration-300">
                     {project.describe}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-gray-600 dark:text-slate-gray font-montserrat leading-relaxed mb-6 transition-colors duration-300">
+                  <p className="text-slate-900 font-montserrat text-sm leading-relaxed mb-6 transition-colors duration-300">
                     {project.backfeed}
                   </p>
 

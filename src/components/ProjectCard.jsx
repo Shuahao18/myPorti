@@ -6,7 +6,7 @@ const ProjectCard = ({ imgURL, techStack = [], describe, backfeed }) => {
         alt='project preview'
         className='object-fill sm:w-[760px] sm:h-[500px] lg:w-[900px] lg:h-[400px] '
       />
-      <h3 className='mt-1 font-humane text-3xl text-center font-bold'>
+      <h3 className='mt-1 font-poppins text-3xl text-center font-bold'>
         {describe}
       </h3>
       <p className='mt-6 max-w-sm text-center info-text'>{backfeed}</p>
