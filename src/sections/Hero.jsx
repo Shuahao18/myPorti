@@ -52,10 +52,10 @@ const Hero = () => {
         variants={containerVariants}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
-        className="max-container w-full flex-1 flex flex-col lg:flex-row items-center gap-12 lg:gap-16 px-8 sm:px-16 pt-16 pb-28"
+        className="max-container w-full flex-1 flex flex-col lg:flex-row items-center gap-12 lg:gap-16 px-8 sm:px-16 pt-16 pb-28 min-w-0"
       >
         {/* Left — Text Content */}
-        <div className="flex-1 w-full">
+        <div className="flex-1 w-full min-w-0">
           <motion.p
             variants={itemVariants}
             className="text-gold font-poppins font-semibold text-[10px] sm:text-xs tracking-[0.3em] uppercase mb-8 sm:mb-10"
@@ -123,7 +123,7 @@ const Hero = () => {
         {/* Right — Profile Photo */}
         <motion.div
           variants={itemVariants}
-          className="flex-1 w-full flex justify-center lg:justify-end"
+          className="flex-1 w-full flex justify-center lg:justify-end min-w-0"
         >
           <div className="relative">
             <div className="absolute -inset-3 border border-gold/20 rounded-2xl" />
@@ -131,7 +131,7 @@ const Hero = () => {
             <img
               src={profileImage}
               alt="Joshua Meredores"
-              className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[340px] lg:h-[340px] object-cover rounded-2xl grayscale-[20%] hover:grayscale-0 transition-all duration-500"
+              className="relative w-full max-w-[340px] h-auto sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[340px] lg:h-[340px] object-cover rounded-2xl grayscale-[20%] hover:grayscale-0 transition-all duration-500"
             />
           </div>
         </motion.div>

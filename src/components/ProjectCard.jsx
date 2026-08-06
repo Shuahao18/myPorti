@@ -4,7 +4,7 @@ const ProjectCard = ({ imgURL, techStack = [], describe, backfeed }) => {
       <img
         src={imgURL}
         alt='project preview'
-        className='object-fill sm:w-[760px] sm:h-[500px] lg:w-[900px] lg:h-[400px] '
+        className='w-full max-w-full h-auto sm:h-[500px] lg:h-[400px] object-cover'
       />
       <h3 className='mt-1 font-poppins text-3xl text-center font-bold'>
         {describe}
@@ -19,7 +19,7 @@ const ProjectCard = ({ imgURL, techStack = [], describe, backfeed }) => {
               key={index}
               src={tech}
               alt={`tech-${index}`}
-              className='object-fill w-[70px] h-[70px]'
+              className='object-fill w-14 h-14 sm:w-[70px] sm:h-[70px]'
             />
           ))}
         </div>

@@ -48,7 +48,7 @@ const App = () => {
 
   return (
     <ThemeProvider>
-      <main className="relative min-h-screen bg-primary">
+      <main className="relative min-h-screen bg-primary overflow-x-hidden">
         <Nav
           visible={true}
           isPageTwo={isPageTwo}
