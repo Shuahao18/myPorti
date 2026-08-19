@@ -70,7 +70,7 @@ const Skills = () => {
         variants={containerVariants}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
-        className="max-container px-8 sm:px-16 py-20 md:py-28"
+        className="max-container px-5 sm:px-8 md:px-16 py-16 sm:py-20 md:py-28"
       >
         {/* Section Label */}
         <motion.p
@@ -132,8 +132,8 @@ const Skills = () => {
             </div>
           </div>
 
-          {/* Skill Preview */}
-          <motion.div variants={itemVariants} className="flex items-start justify-center">
+          {/* Skill Preview — hidden on small mobile, shown from sm up */}
+          <motion.div variants={itemVariants} className="hidden sm:flex items-start justify-center">
             <div className="sticky top-28 w-full">
               <div className="border border-gray-200 rounded-2xl p-8 bg-white shadow-sm">
                 <p className="text-gold font-poppins text-[10px] tracking-[0.3em] uppercase text-center mb-6">

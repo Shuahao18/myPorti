@@ -10,39 +10,41 @@ const Nav = ({ visible = true, isPageTwo = false, activeSection = "home" }) => {
 
   return (
     <header
-      className={`md:hidden fixed top-0 left-0 right-0 z-50 ${backgroundClass} backdrop-blur-md border-b border-white/10 transition-all duration-300`}
+      className={`md:hidden fixed top-0 left-0 right-0 z-50 ${backgroundClass} backdrop-blur-md border-b border-white/10 transition-all duration-300 safe-top`}
     >
-      <nav className="max-container px-6 sm:px-16 flex flex-col md:flex-row items-start md:items-center justify-between py-4 gap-4 relative">
-        <a
-          href="#home"
-          className="text-gold font-poppins font-bold text-xs tracking-[0.2em] uppercase"
-          onClick={() => setMenuOpen(false)}
-        >
-          JM
-        </a>
+      <nav className="max-container px-5 sm:px-8 relative">
+        <div className="flex items-center justify-between py-3 min-h-[56px]">
+          <a
+            href="#home"
+            className="text-gold font-poppins font-bold text-sm tracking-[0.2em] uppercase"
+            onClick={() => setMenuOpen(false)}
+          >
+            JM
+          </a>
 
-        <button
-          type="button"
-          className="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-white/10 text-white hover:bg-white/10 transition-colors duration-200"
-          aria-label="Toggle navigation"
-          aria-expanded={menuOpen}
-          onClick={() => setMenuOpen((prev) => !prev)}
-        >
-          <span className="sr-only">Open menu</span>
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d={menuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
-            />
-          </svg>
-        </button>
+          <button
+            type="button"
+            className="inline-flex items-center justify-center min-w-[44px] min-h-[44px] p-2 rounded-lg border border-white/10 text-white hover:bg-white/10 transition-colors duration-200"
+            aria-label="Toggle navigation"
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen((prev) => !prev)}
+          >
+            <span className="sr-only">Open menu</span>
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d={menuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+              />
+            </svg>
+          </button>
+        </div>
 
         <ul
-          className={`md:flex gap-8 sm:gap-10 md:items-center w-full md:w-auto ${
-            menuOpen ? "block" : "hidden md:block"
-          } bg-secondary/95 md:bg-transparent rounded-xl md:rounded-none p-4 md:p-0 absolute md:static top-full left-0 md:left-auto md:top-auto shadow-lg md:shadow-none border border-white/10 md:border-0`}
+          className={`md:flex gap-6 sm:gap-10 md:items-center w-full md:w-auto ${
+            menuOpen ? "block pb-4" : "hidden md:block"
+          } bg-secondary/95 md:bg-transparent rounded-xl md:rounded-none px-2 md:p-0 md:static shadow-lg md:shadow-none border border-white/10 md:border-0`}
         >
           {navLinks.map((item) => {
             const sectionId = item.href.replace("#", "");
@@ -62,10 +64,10 @@ const Nav = ({ visible = true, isPageTwo = false, activeSection = "home" }) => {
               : "text-text/60 hover:text-white border-transparent";
 
             return (
-              <li key={item.label}>
+              <li key={item.label} className="py-2 md:py-0">
                 <a
                   href={item.href}
-                  className={`${baseClasses} ${stateClasses}`}
+                  className={`${baseClasses} ${stateClasses} flex min-h-[44px] items-center`}
                   onClick={() => setMenuOpen(false)}
                 >
                   {item.label}

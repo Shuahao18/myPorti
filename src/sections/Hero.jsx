@@ -46,61 +46,59 @@ const Hero = () => {
     <section
       id="home"
       ref={ref}
-      className="relative overflow-visible w-full min-h-screen bg-primary flex flex-col justify-between"
+      className="relative overflow-hidden w-full bg-primary flex flex-col lg:min-h-screen"
     >
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
-        className="max-container w-full flex-1 flex flex-col lg:flex-row items-center gap-12 lg:gap-16 px-8 sm:px-16 pt-16 pb-28 min-w-0"
+        className="max-container w-full flex flex-col lg:flex-row lg:flex-1 items-center gap-8 sm:gap-12 lg:gap-16 px-5 sm:px-8 md:px-16 pt-20 sm:pt-24 pb-10 sm:pb-16 lg:pb-28 min-w-0"
       >
         {/* Left — Text Content */}
-        <div className="flex-1 w-full min-w-0">
+        <div className="flex-1 w-full min-w-0 text-center lg:text-left">
           <motion.p
             variants={itemVariants}
-            className="text-gold font-poppins font-semibold text-[10px] sm:text-xs tracking-[0.3em] uppercase mb-8 sm:mb-10"
+            className="text-gold font-poppins font-semibold text-xs sm:text-sm tracking-[0.25em] sm:tracking-[0.3em] uppercase mb-4 sm:mb-8"
           >
             Software Developer
           </motion.p>
 
           <motion.h1
             variants={itemVariants}
-            className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-[1.05] mb-6 sm:mb-8 max-w-full break-words"
+            className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-4 sm:mb-6 max-w-full break-words"
           >
-            Joshua
-           
-            Meredores
+            Joshua Meredores
           </motion.h1>
 
           <motion.p
             variants={itemVariants}
-            className="font-poppins text-white text-sm sm:text-base md:text-lg font-medium tracking-[0.15em] uppercase max-w-2xl mb-8 sm:mb-10 leading-relaxed"
+            className="font-poppins text-white text-sm sm:text-base md:text-lg font-medium tracking-[0.08em] sm:tracking-[0.15em] uppercase max-w-2xl mx-auto lg:mx-0 mb-5 sm:mb-8 leading-relaxed"
           >
             Building modern web applications with clean code and intuitive design
           </motion.p>
 
           <motion.div
             variants={itemVariants}
-            className="flex flex-wrap items-center gap-4 sm:gap-6 mb-8 sm:mb-10"
+            className="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-6 mb-5 sm:mb-8"
           >
-            <span className="text-gold font-poppins font-bold text-xs sm:text-sm tracking-[0.2em] uppercase">
+            <span className="text-gold font-poppins font-bold text-[11px] sm:text-sm tracking-[0.12em] sm:tracking-[0.2em] uppercase break-all sm:break-normal">
               joshuemeredores@gmail.com · 09093575240
             </span>
           </motion.div>
 
           <motion.p
             variants={itemVariants}
-            className="font-poppins text-text/80 text-sm sm:text-base max-w-xl leading-relaxed font-light"
+            className="font-poppins text-text/80 text-sm sm:text-base max-w-xl mx-auto lg:mx-0 leading-relaxed font-light"
           >
             Passionate about creating seamless user experiences across the full
             stack. Proficient in React, Python, and modern web technologies —
             ready to build systems that scale.
           </motion.p>
 
-          <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mt-10">
+          <motion.div variants={itemVariants} className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 mt-8 sm:mt-10">
             <a
               href="#project"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gold text-primary font-poppins font-semibold text-sm rounded-full hover:bg-gold/90 transition-colors duration-300"
+              className="inline-flex items-center justify-center gap-2 min-h-[44px] px-6 py-3 bg-gold text-primary font-poppins font-semibold text-sm rounded-full hover:bg-gold/90 transition-colors duration-300"
             >
               View Projects
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -110,7 +108,7 @@ const Hero = () => {
             <a
               href="/Joshua_Meredores.pdf"
               download="JOSH_MEREDORES.pdf"
-              className="inline-flex items-center gap-2 px-6 py-3 border border-gold/40 text-gold font-poppins font-semibold text-sm rounded-full hover:bg-gold/10 transition-colors duration-300"
+              className="inline-flex items-center justify-center gap-2 min-h-[44px] px-6 py-3 border border-gold/40 text-gold font-poppins font-semibold text-sm rounded-full hover:bg-gold/10 transition-colors duration-300"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v10m0 0l-4-4m4 4l4-4M4 20h16" />
@@ -123,22 +121,22 @@ const Hero = () => {
         {/* Right — Profile Photo */}
         <motion.div
           variants={itemVariants}
-          className="flex-1 w-full flex justify-center lg:justify-end min-w-0"
+          className="w-full max-w-[280px] sm:max-w-xs lg:flex-1 lg:max-w-none flex justify-center lg:justify-end min-w-0 shrink-0"
         >
-          <div className="relative">
+          <div className="relative w-full">
             <div className="absolute -inset-3 border border-gold/20 rounded-2xl" />
             <div className="absolute -inset-1.5 border border-gold/10 rounded-2xl" />
             <img
               src={profileImage}
               alt="Joshua Meredores"
-              className="relative w-full max-w-[340px] h-auto sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[340px] lg:h-[340px] object-cover rounded-2xl grayscale-[20%] hover:grayscale-0 transition-all duration-500"
+              className="relative w-full aspect-square object-cover rounded-2xl grayscale-[20%] hover:grayscale-0 transition-all duration-500"
             />
           </div>
         </motion.div>
       </motion.div>
 
       {/* Bottom Navigation — Home only (page 1) */}
-      <nav id="hero-bottom-nav" className="relative hidden md:block w-full border-t border-white/10 bg-primary/90 backdrop-blur-xl mt-10">
+      <nav id="hero-bottom-nav" className="relative hidden md:block w-full border-t border-white/10 bg-primary/90 backdrop-blur-xl">
         <div className="max-container px-8 sm:px-16">
           <ul className="flex items-center justify-start gap-8 sm:gap-12 py-5 sm:py-6">
             <li>

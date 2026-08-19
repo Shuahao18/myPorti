@@ -17,11 +17,13 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+  scroll-padding-top: 72px;
   width: 100%;
   min-width: 0;
   max-width: 100vw;
   overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   background-color: #111111;
   --color-primary: #111111;
   --color-secondary: #1a1a1a;
@@ -326,5 +328,13 @@ html.light {
 
   .shadow-hover {
     @apply hover:shadow-2xl dark:hover:shadow-2xl dark:hover:shadow-coralY/20;
+  }
+
+  .safe-top {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+
+  .pb-safe {
+    padding-bottom: max(1.5rem, env(safe-area-inset-bottom, 0px));
   }
 }

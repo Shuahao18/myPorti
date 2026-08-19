@@ -13,7 +13,7 @@ const Contact = () => {
     <section
       ref={ref}
       id="contact-us"
-      className="relative overflow-hidden w-full bg-[#f8f5ef] px-6 py-32 sm:px-10 lg:px-16"
+      className="relative overflow-hidden w-full min-h-screen bg-[#f8f5ef] px-5 py-16 sm:px-8 sm:py-24 lg:px-16 lg:py-32 pb-safe"
     >
       <div className="section-bg-pattern absolute inset-0 pointer-events-none" />
       <div className="absolute inset-x-0 top-6 hidden md:block">
@@ -26,9 +26,9 @@ const Contact = () => {
         variants={containerVariants}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
-        className="max-container mx-auto grid gap-16 xl:grid-cols-[1.05fr_0.95fr] items-center relative"
+        className="max-container mx-auto grid gap-10 sm:gap-16 xl:grid-cols-[1.05fr_0.95fr] items-center relative"
       >
-        <div className="space-y-8 z-10">
+        <div className="space-y-5 sm:space-y-8 z-10">
           <div className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-[#b98c2f] font-semibold">
             <span className="w-9 h-9 rounded-full bg-[#f7e6c0]/80 border border-[#b98c2f]/20 flex items-center justify-center text-[10px] font-black text-[#b98c2f]">
               LET'S
@@ -36,7 +36,7 @@ const Contact = () => {
             Talk to me
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight text-[#111111] max-w-3xl">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black leading-tight text-[#111111] max-w-3xl">
             Build something bold together.
           </h2>
 
@@ -56,7 +56,7 @@ const Contact = () => {
           <form
             action="https://formsubmit.co/joshuemeredores@gmail.com"
             method="POST"
-            className="relative overflow-hidden rounded-[48px] border border-[#f1c66f]/20 bg-white/95 p-10 shadow-[0_40px_120px_rgba(17,17,17,0.12)] backdrop-blur-sm sm:p-12 space-y-10"
+            className="relative overflow-hidden rounded-3xl sm:rounded-[48px] border border-[#f1c66f]/20 bg-white/95 p-6 sm:p-10 lg:p-12 shadow-[0_40px_120px_rgba(17,17,17,0.12)] backdrop-blur-sm space-y-6 sm:space-y-10"
           >
             <input type="hidden" name="_subject" value="New Portfolio Contact Message" />
             <input type="hidden" name="_captcha" value="false" />
@@ -66,11 +66,11 @@ const Contact = () => {
               <div className="h-16 w-16 rounded-full border border-[#f1c66f]/30 bg-[#f8e8c5]/70" />
             </div>
 
-            <div className="mb-10">
+            <div className="mb-6 sm:mb-10">
               <p className="text-xs uppercase tracking-[0.35em] text-[#b98c2f] font-semibold mb-3">
                 Contact Form
               </p>
-              <h3 className="text-3xl font-bold text-[#111111] leading-tight">
+              <h3 className="text-2xl sm:text-3xl font-bold text-[#111111] leading-tight">
                 Let’s make your next project shine.
               </h3>
             </div>
