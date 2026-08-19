@@ -108,7 +108,7 @@ const Hero = () => {
               </svg>
             </a>
             <a
-              href="/Joshua_Meredores%20(1).pdf"
+              href="/Joshua_Meredores.pdf"
               download="JOSH_MEREDORES.pdf"
               className="inline-flex items-center gap-2 px-6 py-3 border border-gold/40 text-gold font-poppins font-semibold text-sm rounded-full hover:bg-gold/10 transition-colors duration-300"
             >
