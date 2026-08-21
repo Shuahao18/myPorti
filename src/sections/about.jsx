@@ -99,7 +99,7 @@ const About = () => {
           transition={{ duration: 0.3 }}
           src={me + "?v=" + Date.now()}  
           alt="Joshua - Software Developer"
-          className="relative w-full max-w-md object-cover rounded-2xl shadow-2xl ring-4 ring-coralY/20 hover:ring-coralY/50 transition-all duration-300"
+          className="relative w-full max-w-[280px] sm:max-w-xs lg:max-w-[360px] object-cover rounded-2xl shadow-2xl ring-4 ring-coralY/20 hover:ring-coralY/50 transition-all duration-300"
         />
 
         {/* Social Link */}

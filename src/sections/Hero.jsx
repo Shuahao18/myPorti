@@ -121,7 +121,7 @@ const Hero = () => {
         {/* Right — Profile Photo */}
         <motion.div
           variants={itemVariants}
-          className="w-full max-w-[280px] sm:max-w-xs lg:flex-1 lg:max-w-none flex justify-center lg:justify-end min-w-0 shrink-0"
+          className="w-full max-w-[280px] sm:max-w-xs lg:w-[min(100%,360px)] lg:max-w-[360px] flex justify-center lg:justify-end min-w-0 shrink-0"
         >
           <div className="relative w-full">
             <div className="absolute -inset-3 border border-gold/20 rounded-2xl" />
